@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Way Properties</title>
+
+    
+    <!-- Favicon  -->
+    <link rel="icon" type="image/x-icon" href="../PICS/favicon-32x32.png">
+
+    
+
+    <!-- Bootstrap CSS -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.css">
+    
+            <!-- custom.css -->
+
+            <link rel="stylesheet" href="adminstyles.css">
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="main-container">
+       <div class="right-side px-2 py-3 py-lg-5 px-lg-4">
+        <h2 class="notification-heading">Notifications:</h2>
+        <ul class="notification-list px-lg-5 px-1 px-sm-3 pt-3  pt-lg-5">
+          
+          <li class="notification-items px-1 px-sm-2 py-1 px-lg-2 py-lg-2" onclick="clientreview()">Client Review</li>
+          <li class="notification-items px-1 px-sm-2 py-2" onclick="contactform()">Contact Form</li>
+          <li class="notification-items px-1 px-sm-2 py-2" onclick="Scheduleform()">Schedule Form</li>
+          <li class="notification-items px-1 px-sm-2 py-2" onclick="newsletter()">News Letter</li>
+          <li class="notification-items px-1 px-sm-2 py-2" onclick="addlistinginfomsg()">Listing Form</li>
+          <li class="notification-items px-1 px-sm-2 py-2" onclick="viewlistinginfo()">See Listing</li>
+          <li class="notification-items px-1 px-sm-2 py-2" onclick="addlistinginfo()">Add Listing</li>
+        </ul>
+        <div class="log-out p-2" onclick="logout()">log out</div>
+
+      </div>
+
+      <div class="left-side px-1 px-sm-3 py-sm-5 py-4">
+        <h2 class="dashbord ">Dashboard:</h2>
+        <div id="left-side-container" class=" mt-4 mt-lg-5">
+
+        </div>
+
+      </div>
+
+      </div>
+    </div>
+                               <!-- jQuery -->
+                               <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+                               
+                               <!-- Bootstrap JavaScript -->
+                               <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+                               
+
+                               <!-- <script src="databs.js" ></script> -->
+                               <!-- custom javacript  -->
+                               <script src="signup.js"></script>
+
+                               <script>
+                                    if (!sessionStorage.getItem("sessionToken")) {
+      // Redirect the user back to the login page
+      window.location.href = "signup.html";
+    }
+
+// Add an event listener to clear the session token when the user exits the page
+window.addEventListener('beforeunload', function() {
+  sessionStorage.removeItem('sessionToken');
+});
+function logout(){
+  // const log_out = document.querySelector('#log-out');
+  sessionStorage.removeItem('sessionToken');
+    // Redirect the user back to the login page
+    window.location.href = 'signup.html';
+}
+                               </script>
+   
+                </body>
+                </html>

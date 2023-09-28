@@ -1,0 +1,302 @@
+<div id="main-nav-color" class="container-fluid fixed-top for-togle-htg" >
+  <!-- top nav  -->
+  <nav id="top-nav-hide" class="navbar navbar-expand-lg px-2 py-0 py-md-3 px-md-5 top-nav navbar-dark ">
+      <ul class="navbar-nav top-nav-contact">
+        <li class="nav-item ">
+          <a  class="nav-link text-white " href="mailto:adeebhanif96@gmail.com?subject=Interested%20in%20your%20services&body=Hello,%0D%0A%0D%0AI am interested in your services. Please contact me at your earliest convenience.%0D%0A%0D%0AThank you,%0D%0A[Your Name]"><i class="fa-regular fa-envelope"></i> &nbsp; adeebhanif96@gmail.com</a>
+        </li>
+        <li class="nav-item ">
+          <a  class="nav-link text-white " href="tel:03012363828"><i class="fa-brands fa-whatsapp"></i> &nbsp; 0301-2363828</a>
+        </li>
+      </ul>
+
+    </nav>
+ 
+    
+     <nav id="btm-nav" class="navbar navbar-expand-lg main-nav py-0 py-md-3 navbar-dark ">
+      <div class="logo-p px-1 px-sm-2 px-md-5">
+    <a class="logo" href="https://bestwaysproperty.com/">
+      
+           <img src="https://bestwaysproperty.com/PICS/Group%2013.svg" alt="Icon" class=" logo-width ">
+  </a>
+  </div>
+        <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon "></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mx-auto page-ul   mb-2 ml-5 mb-lg-0">
+          <li class="nav-item ">
+            <a  class="nav-link one text-white active-page px-2 px-md-4 py-1 py-md-2" aria-current="page" data-page="home" href="index.html">Home</a>
+          </li>
+          <li class="nav-item ">
+            <a  class="nav-link text-white one px-2 px-md-4 py-1 py-md-2" data-page="properties" href="properties.html" 
+           >Properties</a>
+          </li>
+          <li class="nav-item ">
+            <a  class="nav-link text-white one px-2 px-md-4 py-1 py-md-2" data-page="testimonials" href="testimonials.html" 
+           >Testimonials</a>
+          </li>
+          <li class="nav-item ">
+            <a  class="nav-link text-white one px-2 px-md-4 py-1 py-md-2" data-page="faqs" href="faqs.html" 
+           >FAQS</a>
+          </li>
+    
+          <li class="nav-item ">
+            <a  class="nav-link text-white one px-2 px-md-4 py-1 py-md-2" data-page="about-us" href="about-us.html">About Us</a>
+          </li>
+          <li class="nav-item ">
+            <a  class="nav-link text-white one px-2 px-md-4 py-1 py-md-2" data-page="contact-us" href="contact-us.html">Contact Us</a>
+          </li>
+          </ul>
+ 
+          
+            
+          
+        </div>
+    
+      </nav> 
+      </div>
+
+  <script>
+
+
+ 
+// to hide topnav on scroll 
+let topNav = document.querySelector('#top-nav-hide');
+let mainNav = document.querySelector('#main-nav-color');
+let nav = document.querySelector('#btm-nav');
+
+// Set the initial background color of mainNav to transparent
+
+
+
+// Get the initial scroll position
+let prevScrollpos = window.pageYOffset;
+
+// On scroll event listener
+window.onscroll = function() {
+  // Get the current page URL
+  var currentUrl = window.location.href;
+  const indexfile = document.querySelector('.main-file');
+
+  
+  let currentScrollPos = window.pageYOffset;
+  if(currentUrl){
+  // Check if the current page is the home page
+  if (currentUrl.indexOf('index.html') > -1 || indexfile) {
+    // Get the current scroll position
+    
+    // Check if the user has scrolled down the page
+    if (window.innerWidth > 1054){
+    if (prevScrollpos > currentScrollPos) {
+      // If not, show the top nav
+      topNav.style.display = 'flex';
+      mainNav.style.background = 'transparent';
+      nav.classList.remove('scroll-up');
+    } else if (currentScrollPos > 600) {
+      // If yes, hide the top nav
+      topNav.style.display = 'none';
+      mainNav.style.background = '#000';
+      nav.classList.add('scroll-up');
+    }
+   
+    // Update the previous scroll position
+    prevScrollpos = 600;
+  }else if (window.innerWidth > 675){
+    if (prevScrollpos > currentScrollPos) {
+      // If not, show the top nav
+      topNav.style.display = 'flex';
+      mainNav.style.background = 'transparent';
+      nav.classList.remove('scroll-up');
+    } else if (currentScrollPos > 400) {
+      // If yes, hide the top nav
+      topNav.style.display = 'none';
+      mainNav.style.background = '#000';
+      nav.classList.add('scroll-up');
+    }
+   
+    // Update the previous scroll position
+    prevScrollpos = 400;
+    
+  }else if (window.innerWidth > 500){
+    if (prevScrollpos > currentScrollPos) {
+      // If not, show the top nav
+      topNav.style.display = 'flex';
+      mainNav.style.background = 'transparent';
+      nav.classList.remove('scroll-up');
+    } else if (currentScrollPos > 300) {
+      // If yes, hide the top nav
+      topNav.style.display = 'none';
+      mainNav.style.background = '#000';
+      nav.classList.add('scroll-up');
+    }
+   
+    // Update the previous scroll position
+    prevScrollpos = 300;
+    
+  }else if (window.innerWidth > 250){
+    if (prevScrollpos > currentScrollPos) {
+      // If not, show the top nav
+      topNav.style.display = 'flex';
+      mainNav.style.background = 'transparent';
+      nav.classList.remove('scroll-up');
+    } else if (currentScrollPos > 200) {
+      // If yes, hide the top nav
+      topNav.style.display = 'none';
+      mainNav.style.background = '#000';
+      nav.classList.add('scroll-up');
+    }
+   
+    // Update the previous scroll position
+    prevScrollpos = 200;
+    
+  }
+  }else if(currentUrl.indexOf('properties-details.html') > -1){
+    if (window.innerWidth > 600){
+    if (prevScrollpos > currentScrollPos) {
+      // If not, show the top nav
+      topNav.style.display = 'flex';
+      nav.classList.remove('scroll-up');
+    } else if (currentScrollPos > 150) {
+      // If yes, hide the top nav
+      topNav.style.display = 'none';
+      nav.classList.add('scroll-up');
+    }
+    
+    // Update the previous scroll position
+    prevScrollpos = 150;
+  } else if (window.innerWidth > 575){
+    if (prevScrollpos > currentScrollPos) {
+      // If not, show the top nav
+      topNav.style.display = 'flex';
+      nav.classList.remove('scroll-up');
+    } else if (currentScrollPos > 100) {
+      // If yes, hide the top nav
+      topNav.style.display = 'none';
+      nav.classList.add('scroll-up');
+    }
+    
+    // Update the previous scroll position
+    prevScrollpos = 100;
+  }else if (window.innerWidth > 150){
+    if (prevScrollpos > currentScrollPos) {
+      // If not, show the top nav
+      topNav.style.display = 'flex';
+      nav.classList.remove('scroll-up');
+    } else if (currentScrollPos > 50) {
+      // If yes, hide the top nav
+      topNav.style.display = 'none';
+      nav.classList.add('scroll-up');
+    }
+    
+    // Update the previous scroll position
+    prevScrollpos = 50;
+  }
+  }
+  else {
+        // Check if the user has scrolled down the page
+        if (window.innerWidth > 693){
+        if (prevScrollpos > currentScrollPos) {
+      // If not, show the top nav
+      topNav.style.display = 'flex';
+      nav.classList.remove('scroll-up');
+    } else if (currentScrollPos > 400) {
+      // If yes, hide the top nav
+      topNav.style.display = 'none';
+      nav.classList.add('scroll-up');
+    }
+    
+    // Update the previous scroll position
+    prevScrollpos = 400;
+  }else if (window.innerWidth > 193){
+        if (prevScrollpos > currentScrollPos) {
+      // If not, show the top nav
+      topNav.style.display = 'flex';
+      nav.classList.remove('scroll-up');
+    } else if (currentScrollPos > 300) {
+      // If yes, hide the top nav
+      topNav.style.display = 'none';
+      nav.classList.add('scroll-up');
+    }
+    
+    // Update the previous scroll position
+    prevScrollpos = 300;
+  }
+  }
+}
+}
+    
+
+
+
+
+
+
+
+  $(document).ready(function() {
+    const navbarToggler = document.querySelector('.navbar-toggler');
+    const navbarCollapse = document.querySelector('.navbar-collapse');
+  
+    navbarCollapse.addEventListener('show.bs.collapse', () => {
+      navbarToggler.setAttribute('aria-expanded', 'true');
+      mainNav.style.height = 'fit-content';
+      mainNav.classList.remove('for-togle-htg');
+    });
+  
+    navbarCollapse.addEventListener('hide.bs.collapse', () => {
+      navbarToggler.setAttribute('aria-expanded', 'false');
+      mainNav.classList.add('for-togle-htg');
+    
+    });
+  
+
+  });
+  
+  $(document).ready(function() {
+    // Get the current page URL
+    var currentUrl = window.location.href;
+
+  
+    // Check if the URL contains "properties.html" and add "active" class to the corresponding link
+    
+    if (currentUrl.indexOf('properties.html') > -1 || currentUrl.indexOf('properties-details.html') > -1) {
+      $('.one').removeClass('active-page');
+      $('a[data-page="properties"]').addClass('active-page');
+    }
+
+    // Check if the URL contains "testimonials.html" and add "active" class to the corresponding link
+
+    if (currentUrl.indexOf('testimonials.html') > -1) {
+      $('.one').removeClass('active-page');
+      $('a[data-page="testimonials"]').addClass('active-page');
+    }
+
+    // Check if the URL contains "FAQS.html" and add "active" class to the corresponding link
+
+    if (currentUrl.indexOf('faqs.html') > -1) {
+      $('.one').removeClass('active-page');
+      $('a[data-page="faqs"]').addClass('active-page');
+    }
+  
+    // Check if the URL contains "about us.html" and add "active" class to the corresponding link
+    if (currentUrl.indexOf('about-us.html') > -1) {
+      $('.one').removeClass('active-page');
+      $('a[data-page="about-us"]').addClass('active-page');
+    }
+  
+    // Check if the URL contains "contact us.html" and add "active" class to the corresponding link
+    if (currentUrl.indexOf('contact-us.html') > -1) {
+      $('.one').removeClass('active-page');
+      $('a[data-page="contact-us"]').addClass('active-page');
+    }
+  
+    // Add click event listener to .one elements
+    $('.one').on('click', function() {
+      $('.one').removeClass('active-page');
+      $(this).addClass('active-page');
+    });
+  });
+
+
+
+  </script>

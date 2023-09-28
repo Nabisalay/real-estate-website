@@ -1,0 +1,2909 @@
+/*------- website theme/root secection-----------  */
+:root {
+  --bg-theme: #000;
+  --text-theme: #B78500;
+  --heading-color: #fff;
+  --sub-head: #000;
+  --hover: #ffa940;
+  --text-color: #4F4E4E;
+  --sub-text:#4B4B4B;
+}
+a{
+  text-decoration: none;
+}
+body{
+background-color: #F7F7F7;
+
+}
+.body{
+  padding-top: 140px;
+  background-color: #F7F7F7;
+}
+@media(max-width: 767px){
+  .body{
+    padding-top: 80px;
+  }
+}
+@media(max-width: 560px){
+  .body{
+    padding-top: 70px;
+  }
+}
+@media(max-width: 475px){
+  .body{
+    padding-top: 55px;
+  }
+}
+@media(max-width: 370px){
+  .body{
+    padding-top: 50px;
+  }
+}
+.body #navbar-container #main-nav-color{
+  background-color: #000;
+}
+/*------- website navbar secection-----------  */
+
+
+.navbar-dark .navbar-nav .active-page{
+  color: #B78500  !important;
+}
+#top-nav-hide .navbar-nav .nav-item{
+  color: #B78500 
+} 
+.bg-new-color{
+background-color: #000;
+}
+/* this is to arjust top nav  */
+#top-nav-hide{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* this is for toggler btn on click  */
+.top-nav-contact{
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+  background-image: url('./PICS/cross\ icon.png'); 
+}
+
+.navbar-toggler {
+  font-size: 0.85rem;
+}
+
+/* this is to change the style of search btn  */
+
+ input[ type= "search"] {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #fff;
+  font-size: 15px;
+}
+
+input[type="search"]:focus {
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #ffa940;
+  caret-color: #ffa940; 
+  color: #fff;
+} 
+
+input[ type= "search"]::placeholder{
+  color: #fff;
+  font-size: 17px; 
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  height: 14px;
+  width: 14px;
+  background-image: url('./PICS/cross\ icon.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  /* color: #ffa940; */
+}
+
+/* this is to increase the size of logo font size  */
+.logo-text{
+  color: #fff;
+  font-size: 35px;
+}
+
+.last-word{
+  color: #ffa940;
+}
+
+
+/* this id is use to give the hover effect to all the nav links  */
+
+
+.main-nav, .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+/* this is to increase the font size of nav item  */
+.navbar-dark .navbar-nav .nav-link{
+  font-size: 17px;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover{
+  color: #ffa940 !important;
+  transform: scale(1.05);
+
+}
+
+.logo-width {
+  width: 4rem;
+  height: auto;
+}
+
+
+.for-togle-htg{
+  transition: height 0.10s ease-out;
+}
+
+/* this is to arjust the size of search icon  */
+.navbar-dark .navbar-nav .nav-link #search-icon{
+  font-size: 20px;
+}
+
+/* Responsive section for nav bar start  */
+
+
+@media (max-width: 1060px){
+
+/* this is to arjust the font size of nav item  */
+.navbar-dark .navbar-nav .nav-link{
+  font-size: 15px;
+}
+/* this is to arjust the size of logo font size  */
+.logo-text{
+  font-size: 30px;
+}
+/* this is to arjust the size of logo icon  */
+.logo-width {
+  width: 3rem;
+  height: auto;
+}
+/* this is for the text of search placeholder  */
+input[ type= "search"]::placeholder{
+  font-size: 15px; 
+}
+/* this is for the width of search bar bottom border  */
+input[ type= "search"]{
+  width: 150px; 
+}
+}
+
+@media (max-width: 560px){
+
+/* this is to arjust the font size of nav item  */
+.navbar-dark .navbar-nav .nav-link{
+  font-size: 12px;
+}
+/* this is to arjust the size of search icon  */
+.navbar-dark .navbar-nav .nav-link #search-icon{
+  font-size: 12px;
+}
+/* this is to arjust the size of logo font size  */
+.logo-text{
+  font-size: 25px;
+}
+/* this is to arjust the size of logo icon  */
+.logo-width {
+  width: 3rem;
+  height: auto;
+}
+/* this is for the text of search placeholder  */
+input[ type= "search"]::placeholder{
+  font-size: 12px; 
+}
+/* this is for the width of search bar bottom border  */
+input[ type= "search"]{
+  width: 100px; 
+}
+/* this for the size of nav bar login btn */
+.nav-bar-btn{
+  font-size: 12px;
+ }
+ .navbar-toggler {
+  font-size: 0.50rem; 
+}
+.navbar-toggler:focus{
+  box-shadow: none;
+}
+}
+@media (max-width: 475px){
+
+/* this is to arjust the font size of nav item  */
+.navbar-dark .navbar-nav .nav-link{
+  font-size: 10px;
+}
+
+/* this is to arjust the size of logo font size  */
+.logo-text{
+  font-size: 20px;
+}
+/* this is to arjust the size of logo icon  */
+.logo-width {
+  width: 2rem;
+  height: auto;
+}
+/* this is for the text of search placeholder  */
+input[ type= "search"]::placeholder{
+  font-size: 10px; 
+}
+
+
+
+
+}
+@media (max-width: 420px){
+  /* this to arjust search box for responsive perpose  */
+  #main-nav-color #btm-nav .collapse .search-ul{
+    position: relative;
+    bottom: 5px;
+  } 
+
+  /* this to decrease the bottom padding on the links of page to make responsive  */
+ #main-nav-color #btm-nav .page-ul li a{
+  padding-bottom: 0 !important;
+ }
+
+}
+@media (max-width: 375px){
+
+/* this is to arjust the font size of nav item  */
+.navbar-dark .navbar-nav .nav-link{
+  font-size: 8px;
+}
+
+/* this is to arjust the size of logo font size  */
+.logo-text{
+  font-size: 15px;
+}
+/* this is to arjust the size of logo icon  */
+.logo-width {
+  width: 1.5rem;
+  height: auto;
+}
+/* this is for the text of search placeholder  */
+input[ type= "search"]::placeholder{
+  font-size: 8px; 
+}
+/* this is for modal text size */
+.modal-text{
+  font-size: 0.7rem;
+}
+
+
+
+}
+
+
+
+
+
+/* responsive section for nav end    */
+
+
+
+
+  /* ----------------carousel start-------------- */
+  #carouselExampleCaptions {
+    max-width: 100%;
+  }
+
+.carousel-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.carousel-control-next, .carousel-control-prev{
+  background-color: #ffa940;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    bottom: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:4%;
+    height: 7%;
+    border-radius: 50%;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    border: 0;
+    opacity: .5;
+    transition: opacity .15s ease;
+}
+
+.carousel-control-next-icon, .carousel-control-prev-icon {
+   cursor: pointer;
+   width: 20px;
+   height: 20px; 
+  }
+
+  .carousel-indicators button {
+    width: 10px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    margin: 0 10px;
+  }
+  
+  .carousel-indicators [data-bs-target] {
+    
+    height: 10px;
+    width: 10px;
+  }
+  
+  .carousel-indicators .active {
+    background-color:  #ffa940; 
+  }
+  
+  .carousel-caption {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .modal-body span, a{
+    color: #B78500;
+  }
+  .view
+
+#last-team-card{
+  display: flex;
+  align-self: center;
+}
+  .modal-body a:hover{
+    color: green;
+  }
+/* responsive section for carousel start    */
+
+@media(max-width: 500px){
+  .carousel-indicators [data-bs-target] {
+    
+    height: 7px;
+    width: 7px;
+  }
+}
+
+/* ----------------carousel end-------------- */
+
+/*------------------- card start-------------- */
+/* this is to animation all the other staff on the home page */
+ 
+.card-body-p{
+  overflow: hidden;
+  /* border: none; */
+  border-radius: 10px;
+
+}
+.img-box{
+  /* max-height: 290px; */
+  border-radius: 10px;
+  transition: transform 0.5s;
+}
+.img-box:hover{
+  transform: scale(1.05);
+  border-radius: 10px;
+}
+/* home page main heading  */
+.home-pg-main-heading{
+  color: var(--text-theme);
+  font-size: 3rem;
+}
+
+/* this is for the collection title  */
+
+.collection-card-title{
+  font-size: 30px;
+}
+
+/* this is for the collection price  */
+
+.collection-card-price{
+  font-size: 1.3rem;
+}
+/* this is for the collection description  */
+.collection-card-description{
+font-size: 20px;
+}
+
+/* this is for the the size of collection icons  */
+
+.home-collection-row .card-p .card .card-body .d-flex .sub-text{
+font-size: 20px;
+}
+
+/* this for the font size of collection seller name */
+.home-collection-row .card-p .card .card-body .d-flex .seller-name{
+  font-size: 20px;
+  }
+
+  /* this is to arjust the image size of seller on the collection  */
+  .home-collection-row .card-p .card .card-body .d-flex .seller-profile{
+    width: 70px;
+    height: 70px;
+  } 
+.card-theme-p, .card-theme-price{
+  color: var(--text-theme);
+}
+.collection-card-title{
+  font-size: 1.5rem;
+}
+.text-color{
+color: var(--text-color);
+}
+.sub-text{
+color: var(--sub-text);
+}
+
+/* this for the badge of collection card  */
+.badge-p{
+  width: 5rem;
+  height: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+}
+
+/* responsive section for card start    */
+@media(max-width: 1024px){
+  /* home page main heading  */
+  .home-pg-main-heading{
+    font-size: 40px;
+  }
+  
+  /* this is for the collection title  */
+  .collection-card-title{
+    font-size: 25px;
+  }
+  
+  /* this is for the collection price  */
+  .collection-card-price{
+    font-size: 20px;
+  }
+  
+  /* this is for the collection description  */
+  .collection-card-description{
+    font-size: 17px;
+    }
+  
+  /* this for the badge of collection card  */
+    .badge-p{
+      width: 4rem;
+      height: 1.5rem;
+      font-size: 12px;
+    }
+    /* this is for the the size of collection icons  */
+  .home-collection-row .card-p .card .card-body .d-flex .sub-text{
+    font-size: 17px;
+    }
+    /* this is to arjust the image size of seller on the collection  */
+    .home-collection-row .card-p .card .card-body .d-flex .seller-profile{
+      width: 50px;
+      height: 50px;
+    } 
+  
+    /* this for the font size of collection seller name */
+  .home-collection-row .card-p .card .card-body .d-flex .seller-name{
+    font-size: 17px;
+    }
+
+}
+ @media(max-width: 500px){
+  /* home page main heading  */
+  .home-pg-main-heading{
+    font-size: 30px;
+  }
+  
+  /* this is for the collection title  */
+  .collection-card-title{
+    font-size: 22px;
+  }
+  
+  /* this is for the collection price  */
+  .collection-card-price{
+    font-size: 17px;
+  }
+  
+  /* this is for the collection description  */
+  .collection-card-description{
+    font-size: 14px;
+    }
+  
+  /* this for the badge of collection card  */
+    .badge-p{
+      width: 3rem;
+      height: 1.5rem;
+      font-size: 10px;
+    } 
+
+    /* this is for the the size of collection icons  */
+  .home-collection-row .card-p .card .card-body .d-flex .sub-text{
+    font-size: 14px;
+    }
+
+    /* this is to arjust the image size of seller on the collection  */
+    .home-collection-row .card-p .card .card-body .d-flex .seller-profile{
+      width: 40px;
+      height: 40px;
+    } 
+  
+    /* this for the font size of collection seller name */
+  .home-collection-row .card-p .card .card-body .d-flex .seller-name{
+    font-size: 14px;
+    }
+}
+ @media(max-width: 400px){
+  /* home page main heading  */
+  .home-pg-main-heading{
+    font-size: 25px;
+  }
+  
+  /* this is for the collection title  */
+  .collection-card-title{
+    font-size: 19px;
+  }
+  
+  /* this is for the collection price  */
+  .collection-card-price{
+    font-size: 15px;
+  }
+  
+  /* this is for the collection description  */
+  .collection-card-description{
+    font-size: 12px;
+    }
+
+    /* this is for the the size of collection icons  */
+  .home-collection-row .card-p .card .card-body .d-flex .sub-text{
+    font-size: 12px;
+    }
+
+    /* this is to arjust the image size of seller on the collection  */
+    .home-collection-row .card-p .card .card-body .d-flex .seller-profile{
+      width: 40px;
+      height: 40px;
+    } 
+  
+    /* this for the font size of collection seller name */
+  .home-collection-row .card-p .card .card-body .d-flex .seller-name{
+    font-size: 14px;
+    }
+}
+
+
+/* responsive section for card end    */
+
+
+/* -------------- card end -------------- */
+
+/* -------------- about us section start -------------- */
+/* this is for the font size of all the sub heading on the main page  */
+.home-pg-sub-heading{
+  font-size: 2.3rem;
+  color: var(--text-theme);
+}
+/* this is for the inner heading of about us session on the home page  */
+
+.inner-about-heading{
+  color: var(--text-theme);
+  font-size: 35px;
+}
+.theme-text{
+  color: var(--text-theme);
+}
+.theme-text:hover{
+  opacity: 0.8;
+  color: var(--text-theme);
+}
+#add-review .fas{
+  color: #FFF100;
+}
+
+ /* this is for the main text of about us session on the home page  */
+
+.about-us-text{
+  color: var(--sub-text);
+  font-size: 25px;
+}
+
+/* this is for the inner text of about us session on the home page  */
+
+.about-text-clr{
+  color: var(--text-color);
+  font-size: 16px;
+}
+.about-us-container{
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-us-img {
+  position: relative;
+  transition: 0.5s ease;
+  overflow: hidden;
+}
+
+.about-us-img img {
+  width: 100%;
+  height: 575px;
+
+    }  
+.about-us-img:hover {
+  transform: scale(1.03); 
+
+}
+
+.about-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%);
+  z-index: 1;
+}
+
+.brief-about-us{
+  border: 1px solid #000;
+   border-right: none;
+   position: relative;
+   height: 575px;
+   left: 12px;
+   background-color: #D9D9D9;
+
+}
+
+
+/* -------------- about us responsive section start -------------- */
+/* to arjust text of about us  */ 
+ @media(max-width: 1168px) {
+  .about-text-clr{
+    font-size: 15px;
+  }
+} 
+ @media(max-width: 1052px) {
+
+  /* this is for the inner text of about us section  */
+  .about-text-clr{
+    font-size: 14px;
+  }
+
+  /* this is for the inner heading of about us session on the home page  */
+.inner-about-heading{
+  font-size: 25px;
+}
+
+ /* this is for the main text of about us session on the home page  */
+ .about-us-text{
+  font-size: 20px;
+}
+
+/* this is for the font size of all the sub heading on the main page  */
+.home-pg-sub-heading{
+  font-size: 35px;
+}
+.value-img-container {
+  width: 100%; /* Adjust the width as per your requirements */
+  max-width: 500px; /* Set the maximum width to limit the size if needed */
+  margin: 0 auto; /* Center the container horizontally */
+}
+
+} 
+ @media(max-width: 948px) {
+
+  /* this is for the inner text of about us section  */
+  .about-text-clr{
+    font-size: 11px;
+  }
+
+  /* this is for the width of about us detail container  */
+  .brief-about-us{
+    height: 450px;
+  }
+
+   /* this is for the width of about us img container  */
+  .about-us-img img{
+    height: 450px;
+  }
+  /* this is for the inner heading of about us session on the home page  */
+.inner-about-heading{
+  font-size: 25px;
+}
+
+ /* this is for the main text of about us session on the home page  */
+ .about-us-text{
+  font-size: 20px;
+}
+
+/* this is for the font size of all the sub heading on the main page  */
+.home-pg-sub-heading{
+  font-size: 35px;
+}
+} 
+ @media(max-width: 849px) {
+  /* this is for the inner text of about us section  */
+  .about-text-clr{
+    font-size: 10px;
+  }
+  /* this is for the inner heading of about us session on the home page  */
+.inner-about-heading{
+  font-size: 22px;
+}
+
+ /* this is for the main text of about us session on the home page  */
+ .about-us-text{
+  font-size: 17px;
+}
+
+/* this is for the font size of all the sub heading on the main page  */
+.home-pg-sub-heading{
+  font-size: 32px;
+}
+
+} 
+@media(max-width: 620px) {
+
+  /* this is for the inner text of about us section  */
+  .about-text-clr{
+    font-size: 9px;
+  }
+
+  /* this is for the width of about us detail container  */
+  .brief-about-us{
+    height: 350px;
+  }
+
+   /* this is for the width of about us img container  */
+  .about-us-img img{
+    height: 350px;
+  }
+  /* this is for the inner heading of about us session on the home page  */
+.inner-about-heading{
+  font-size: 18px;
+}
+
+ /* this is for the main text of about us session on the home page  */
+ .about-us-text{
+  font-size: 15px;
+}
+
+/* this is for the font size of all the sub heading on the main page  */
+.home-pg-sub-heading{
+  font-size: 28px;
+}
+}
+@media(max-width: 575px) {
+
+  /* this is for the width of about us detail container  */
+  .brief-about-us{
+    height: fit-content;
+    border: none;
+    background-color: transparent;
+  }
+
+   /* this is for the width of about us img container  */
+  .about-us-img img{
+    height: auto;
+  }
+
+  /* this is for the inner text of about us section  */
+  .about-text-clr{
+    /* font-size: 9px; */
+  } 
+
+  /* this is for the inner heading of about us session on the home page  */
+  .inner-about-heading{
+    font-size: 18px;
+  }
+
+ /* this is for the main text of about us session on the home page  */
+ .about-us-text{
+  font-size: 12px;
+}
+
+/* this is for the font size of all the sub heading on the main page  */
+.home-pg-sub-heading{
+  font-size: 23px;
+}
+}  
+@media(max-width: 575px) {
+
+
+ /* this is for the main text of about us session on the home page  */
+ .about-us-text{
+  font-size: 10px;
+}
+
+
+}  
+
+
+
+/* to arjust img of about us end */
+/* -------------- about us responsive section end -------------- */
+
+/* -------------- about us section end -------------- */
+
+/* ----------------team section start-------------- */
+
+.profile-card {
+text-align: center;
+ display: flex;
+ flex-direction: column;
+ justify-content: center; 
+ align-items: center; 
+}
+
+.profile-img {
+width: 160px;
+height: 160px;
+border-radius: 50%;
+background: #eee;
+display: inline-block;
+}
+/* this is for the font size of team member name  */
+.home-pg-team-row .card-container .profile-name{
+  font-size: 30px;
+}
+
+/* this is for the font size of team member job title  */
+.home-pg-team-row .card-container .profile-job-title{
+  font-size: 20px;
+}
+
+/* this is for the font size of team member job description  */
+.home-pg-team-row .card-container .profile-description{
+  font-size: 20px;
+}
+
+/* this is for the font size of team member view profile  */
+.home-pg-team-row .card-container .view-profile, .home-service-row .card-container .profile-card .view-more{
+  font-size: 25px;
+}
+
+.profile-name {
+margin-top: 20px;
+font-size: 20px;
+color: var(--text-theme);
+font-weight: 500;
+}
+
+.profile-job-title {
+margin-top: 5px;
+font-weight: 500;
+color: #000;
+}
+
+.profile-description {
+margin-top: 15px;
+color: var(--text-color);
+}
+
+
+.img-style{
+border-radius: 50%;
+height:100%;
+width: 100%;
+}
+.view-profile, .home-service-row .card-container .profile-card .view-more{
+color: var(--text-theme);
+opacity: 1;
+
+}
+.view-profile:hover, .home-service-row .card-container .profile-card .view-more:hover{
+color: #b78500b0;
+text-decoration: underline;
+}
+.card-container{
+transition: transform 0.3s ease; 
+}
+
+.card-container:hover{
+transform: scale(1.05);
+}  
+
+@media(max-width: 1243px){
+
+/* this is for the font size of team member job description  */
+  .home-pg-team-row .card-container .profile-description{
+    font-size: 17px;
+  }
+
+/* this is for the font size of team member name  */
+.home-pg-team-row .card-container .profile-name{
+  font-size: 27px;
+}
+
+/* this is for the font size of team member job title  */
+.home-pg-team-row .card-container .profile-job-title{
+  font-size: 17px;
+}
+
+/* this is for the font size of team member view profile  */
+.home-pg-team-row .card-container .view-profile, .home-service-row .card-container .profile-card .view-more{
+  font-size: 22px;
+}
+}
+
+@media(max-width: 1169px){
+
+/* this is for the font size of team member job description  */
+  .home-pg-team-row .card-container .profile-description{
+    font-size: 14px;
+  }
+
+/* this is for the font size of team member name  */
+.home-pg-team-row .card-container .profile-name{
+  font-size: 24px;
+}
+
+/* this is for the font size of team member job title  */
+.home-pg-team-row .card-container .profile-job-title{
+  font-size: 14px;
+}
+
+/* this is for the font size of team member view profile  */
+.home-pg-team-row .card-container .view-profile, .home-service-row .card-container .profile-card .view-more{
+  font-size: 19px;
+}
+}
+
+@media(max-width: 1096px){
+
+/* this is for the font size of team member name  */
+.home-pg-team-row .card-container .profile-name{
+  font-size: 20px;
+}
+}
+
+@media(max-width: 1023px){
+
+  /* this is for the font size of team member job description  */
+    .home-pg-team-row .card-container .profile-description{
+      font-size: 13px;
+    }
+  
+  /* this is for the font size of team member name  */
+  .home-pg-team-row .card-container .profile-name{
+    font-size: 18px;
+  }
+
+  }
+  
+
+
+/* ----------------team section end-------------- */
+
+/* ----------------service section start-------------- */
+/* this is for the size of the service image  */
+.home-service-row .card-container .profile-card .service-img{
+  width: 200px;
+height: 200px;
+}
+
+/* this is for the size of inner text of service image  */
+.home-service-row .card-container .profile-card .service-img .overlay{
+  font-size: 2.5rem;
+}
+
+/* this is for the size of service name  */
+.home-service-row .card-container .profile-card .profile-name{
+  font-size: 25px;
+}
+
+/* this is for the size of service description  */
+.home-service-row .card-container .profile-card .profile-description{
+  font-size: 20px;
+
+}
+
+/* this is for the size of the view more of service section  */
+.home-service-row .card-container .profile-card .view-more{
+  font-size: 25px;
+}
+
+
+.service-img {
+position: relative;
+border-radius: 15px;
+display: inline-block;
+}
+.img-style2{
+border-radius: 15px;
+height:100%;
+width: 100%;
+}
+
+
+.service-img .overlay {
+display: flex;
+align-items: center;
+justify-content: center;
+position: absolute;
+top: 0;
+left: 0;
+border-radius: 15px;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.5);
+color: #fff;
+}
+
+/* responsive section for services section of home page  */
+@media(max-width: 1200px){
+
+  /* this is for the size of the service image  */
+.home-service-row .card-container .profile-card .service-img{
+width: 180px;
+height: 180px;
+} 
+
+/* this is for the size of inner text of service image  */
+ .home-service-row .card-container .profile-card .service-img .overlay{
+  font-size: 2rem;
+} 
+
+/* this is for the size of service name  */
+ .home-service-row .card-container .profile-card .profile-name{
+  font-size: 25px;
+} 
+
+/* this is for the size of service description  */
+ .home-service-row .card-container .profile-card .profile-description{
+  font-size: 20px;
+
+} 
+
+/* this is for the size of the view more of service section  */
+ .home-service-row .card-container .profile-card .view-more{
+  font-size: 25px;
+}
+
+} 
+
+@media(max-width: 1024px){
+
+  /* this is for the size of the service image  */
+.home-service-row .card-container .profile-card .service-img{
+width: 150px;
+height: 150px;
+} 
+
+/* this is for the size of inner text of service image  */
+ .home-service-row .card-container .profile-card .service-img .overlay{
+  font-size: 1.5rem;
+} 
+
+/* this is for the size of service name  */
+ .home-service-row .card-container .profile-card .profile-name{
+  font-size: 23px;
+} 
+
+/* this is for the size of service description  */
+ .home-service-row .card-container .profile-card .profile-description{
+  font-size: 18px;
+
+} 
+
+/* this is for the size of the view more of service section  */
+ .home-service-row .card-container .profile-card .view-more{
+  font-size: 23px;
+}
+
+} 
+
+/* ----------------service section end-------------- */
+
+/* ----------------review section start-------------- */
+/* this is for the image of client  */
+.home-client-row .client-img{
+  height: 170px;
+  width: 170px;
+}
+
+/* this is for the review of client  */
+.home-client-row .client-review{
+  font-size: 30px;
+  font-weight: 500;
+  }
+
+/* this is for the review stars of client  */
+.home-client-row .fa-star{
+  font-size: 20px;
+  }
+
+/* this is for the review text of client  */
+.home-client-row .client-text{
+  font-size: 20px;
+  }
+
+/* this is for the the size of client name  */
+.home-client-row .client-name{
+  font-size: 20px;
+  }
+
+/* this is for the the size of client status  */
+.home-client-row .client-status{
+  font-size: 20px;
+  }
+
+  /* this is for the size of add a review heading  */
+.home-client-row .theme-text{
+  font-size: 35px;
+  }
+
+
+.review-section{
+background-color: #D9D9D9;
+}
+
+
+
+.fas1{
+color: #FFF100;
+}
+
+.fas5{
+color: #000;
+}
+.client-text{
+color: var(--text-color);
+}
+.client-name{
+color: var(--text-theme);
+}
+.client-status{
+color: #000;
+font-weight: 500;
+}
+.client-container{
+transition: transform 0.3s ease; 
+max-width: 100%;
+max-height: 100%;
+}
+.client-container:hover{
+transform: scale(1.03);
+}
+/* responsive section for review section  */
+@media(max-width: 1024px ){
+/* this is for the image of client  */
+.home-client-row .client-img{
+  height: 150px;
+  width: 150px;
+}
+
+/* this is for the review of client  */
+.home-client-row .client-review{
+  font-size: 25px;
+  font-weight: 500;
+  }
+
+/* this is for the review stars of client  */
+.home-client-row .fa-star{
+  font-size: 15px;
+  }
+
+/* this is for the review text of client  */
+.home-client-row .client-text{
+  font-size: 15px;
+  }
+
+/* this is for the the size of client name  */
+.home-client-row .client-name{
+  font-size: 15px;
+  }
+
+/* this is for the the size of client status  */
+.home-client-row .client-status{
+  font-size: 15px;
+  }
+
+  /* this is for the size of add a review heading  */
+.home-client-row .theme-text{
+  font-size: 30px;
+  }
+}
+@media(max-width: 500px ){
+/* this is for the image of client  */
+.home-client-row .client-img{
+  height: 100px;
+  width: 100px;
+}
+
+/* this is for the review of client  */
+.home-client-row .client-review{
+  font-size: 22px;
+  font-weight: 500;
+  }
+
+/* this is for the review stars of client  */
+.home-client-row .fa-star{
+  font-size: 12px;
+  }
+
+/* this is for the review text of client  */
+.home-client-row .client-text{
+  font-size: 12px;
+  }
+
+/* this is for the the size of client name  */
+.home-client-row .client-name{
+  font-size: 12px;
+  }
+
+/* this is for the the size of client status  */
+.home-client-row .client-status{
+  font-size: 12px;
+  }
+
+  /* this is for the size of add a review heading  */
+.home-client-row .theme-text{
+  font-size: 20px;
+  }
+}
+
+ 
+/* ----------------review section end-------------- */
+
+/* ----------------contact section Start-------------- */
+.home-contact-row .contact-us-brief .contact-sub-text{
+font-size: 20px;
+}
+.home-contact-row .contact-us-brief label{
+font-size: 18px;
+}
+.home-contact-row .contact-us-brief input::placeholder, textarea::placeholder{
+font-size: 18px;
+}
+.contact-us-brief{
+  position: relative;
+  height: 575px;
+}
+.contact-us-container{
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact-us-img{
+  position: relative;
+  transition: 0.5s ease;
+  overflow: hidden;
+}
+.contact-us-img img {
+  width: 100%;
+  height: 575px;
+
+    }  
+textarea{
+padding: 10px;
+max-width: 100%;
+max-height: 100px;
+resize: both;
+}
+
+.contact-text{
+color: var(--text-theme);
+font-weight: 500;
+}
+.contact-sub-text{
+color: var(--sub-text);
+}
+.input-p{
+background-color: #EEEAEA;
+border: none;
+border-radius: 5px;
+}
+.input-p::placeholder{
+color: #A1A2A5;
+}
+.form-group label{
+margin-bottom: 8px;
+color: #4F4E4E;
+}
+
+.contact-btn {
+width: 100%;
+max-height: 100%;
+font-size: 22px;
+border-radius: 15px;
+background: linear-gradient(to right, #B78500 0%, #B78500 50%, #fff 50%, #fff 100%);
+background-size: 200% 100%;
+background-position: right center; 
+transition: all 0.5s;
+border: 2px solid #B78500;
+color: #B78500;
+} 
+
+.contact-btn:hover, .contact-btn:focus {
+background-position: left center;
+border: 2px solid #B78500;
+color: #fff;
+}  
+
+
+
+/* responsive section for contact us start */
+@media(max-width: 1123px ){
+  /* this is for the text of contact us section on the home page  */
+  .home-contact-row .contact-us-brief .contact-sub-text{
+    font-size: 18px;
+    }
+
+    /* this is for the label of contact us section  */
+    .home-contact-row .contact-us-brief label{
+    font-size: 16px;
+    }
+
+    /* this is for the size of placeholder  */
+    .home-contact-row .contact-us-brief input::placeholder, textarea::placeholder{
+    font-size: 16px;
+    }
+
+    /* this is for the inner heading of contact us section  */
+    .home-contact-row .contact-us-brief .contact-text{
+      font-size: 28px;
+    }
+}
+@media(max-width: 1030px ){
+  /* this is for the text of contact us section on the home page  */
+  .home-contact-row .contact-us-brief .contact-sub-text{
+    font-size: 16px;
+    }
+
+    /* this is for the label of contact us section  */
+    .home-contact-row .contact-us-brief label{
+    font-size: 14px;
+    }
+
+    /* this is for the size of placeholder  */
+    .home-contact-row .contact-us-brief input::placeholder, textarea::placeholder{
+    font-size: 14px;
+    }
+
+    /* this is for the inner heading of contact us section  */
+    .home-contact-row .contact-us-brief .contact-text{
+      font-size: 26px;
+    }
+}
+
+ @media(max-width: 991px ){
+  .contact-us-brief, .contact-us-img img{
+  height: 500px;
+  }
+  /* this is for the text of contact us section on the home page  */
+  .home-contact-row .contact-us-brief .contact-sub-text{
+    font-size: 14px;
+    }
+
+    /* this is for the label of contact us section  */
+    .home-contact-row .contact-us-brief label{
+    font-size: 12px;
+    }
+
+    /* this is for the size of placeholder  */
+    .home-contact-row .contact-us-brief input::placeholder, textarea::placeholder{
+    font-size: 12px;
+    }
+
+    /* this is for the inner heading of contact us section  */
+    .home-contact-row .contact-us-brief .contact-text{
+      font-size: 24px;
+    }
+  .contact-row textarea{
+    max-height: 80px;
+  }
+}
+@media(max-width: 767px){
+  .contact-us-brief, .contact-us-img img{
+    height: fit-content;
+    }
+
+    .contact-row textarea{
+      max-height: 100px;
+      font-size: 15px;
+    }
+    .contact-btn{
+      font-size: 20px;
+     }
+}
+@media(max-width: 500px ){
+
+  /* this is for the text of contact us section on the home page  */
+  .home-contact-row .contact-us-brief .contact-sub-text{
+    font-size: 12px;
+    }
+
+    /* this is for the label of contact us section  */
+    .home-contact-row .contact-us-brief label{
+    font-size: 10px;
+    }
+
+    /* this is for the size of placeholder  */
+    .home-contact-row .contact-us-brief input::placeholder, textarea::placeholder{
+    font-size: 10px;
+    }
+
+    /* this is for the inner heading of contact us section  */
+    .home-contact-row .contact-us-brief .contact-text{
+      font-size: 20px;
+    }
+  .contact-row textarea{
+    max-height: 80px;
+  }
+  .contact-btn{
+    font-size: 17px;
+   }
+}
+
+/* responsive section for contact us end */
+
+
+/* ----------------contact section end-------------- */
+
+  /* --------------footer start ----------- */
+
+  /* this is a container of footer logo and text to align them equally  */
+  .footer-logo-container{
+    display: flex;
+    align-items: center;
+  }
+
+  /* this is to increase the size of footer logo  */
+.main-footer-container .company-logo-icn{
+  width: 4rem;
+  height: auto;
+}
+
+  /* this is to increase the size of footer logo text  */
+.main-footer-container .footer-logo-text{
+  font-size: 35px;
+}
+
+/* this is for the text of footer about logo  */
+.main-footer-container .footer-text{
+  font-size: 18px;
+}
+
+/* this is for the sub heading of the footer  */
+.main-footer-container .sub-head{
+  font-size: 1.5rem;
+  color: #B78500;
+}
+
+/* this is for the text of newsletter  */
+.main-footer-container .newsletter-text{
+  font-size: 20px;
+}
+
+/* this is for the text of newsletter  */
+.main-footer-container input::placeholder{
+  font-size: 20px;
+}
+
+/* this for the font size of subscribe btn of footer  */
+.main-footer-container #subscribe-btn{
+  font-size: 20px;
+}
+
+/* this is for the link on the home page  */
+.main-footer-container li a{
+  font-size: 20px;
+}
+
+/* this is for the link on the home page  */
+.main-footer-container .end-footer .copy-write{
+  font-size: 20px;
+}
+
+/* this is for the link on the home page  */
+.main-footer-container .end-footer a i{
+  font-size: 35px;
+}
+
+#subscribe-email{
+  width: 150px;
+}
+
+footer {
+background-color: #000;
+
+}
+
+.footer-logo-text{
+  color: #fff;
+  font-size: 25px;
+}
+.homepage-link{
+color: #ffa940;
+opacity: .5;
+}
+.homepage-link:hover{
+opacity: 1;
+}
+
+
+.fab {
+color: #fff;
+font-size: 30px;
+}
+
+.end-footer {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.end-footer .col-md-6:last-child {
+text-align: right;
+}
+
+
+.fab:hover {
+color: #ffa940;
+transform: scale(1.1);
+
+}
+
+.list-unstyled a {
+font-size: 13px;
+text-decoration: none;
+color: #fff;
+}
+
+.list-unstyled a:hover {
+color: #ffa940;
+} 
+
+
+.main-footer{
+display: flex;
+justify-content: space-between;
+align-items: flex-start;
+flex-wrap: wrap;
+}
+.footer-row{
+
+padding-left: 40px;
+}
+#subscribe-btn{
+width: fit-content;
+background-color: #ffa940;
+color: #FFF;
+
+}
+#subscribe-btn:hover {
+border: 1px solid #B78500; 
+background: #fff;
+color: #B78500;
+}
+#subscribe-form .input-group{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* responsive section for footer started  */
+@media(max-width: 1305px){
+  /* this is for the text of newsletter  */
+.main-footer-container input::placeholder{
+  font-size: 17px;
+}
+
+/* this for the font size of subscribe btn of footer  */
+.main-footer-container #subscribe-btn{
+  font-size: 17px;
+}
+}
+@media(max-width: 1182px){
+  /* this to arjust the border of input field of footer section  */
+  .input-group:not(.has-validation)>.dropdown-toggle:nth-last-child(n+3),
+  .input-group:not(.has-validation)>:not(:last-child):not(.dropdown-toggle):not(.dropdown-menu) {
+      border-radius: 10px;
+  }
+  /* this is to increase the size of footer logo  */
+.main-footer-container .company-logo-icn{
+  width: 4rem;
+  height: auto;
+}
+
+  /* this is to increase the size of footer logo text  */
+.main-footer-container .footer-logo-text{
+  font-size: 30px;
+}
+
+/* this is for the text of footer about logo  */
+.main-footer-container .footer-text{
+  font-size: 16px;
+}
+
+/* this is for the sub heading of the footer  */
+.main-footer-container .sub-head{
+  font-size: 25px;
+}
+
+/* this is for the text of newsletter  */
+.main-footer-container .newsletter-text{
+  font-size: 16px;
+}
+
+
+/* this is for the link on the home page  */
+.main-footer-container li a{
+  font-size: 17px;
+}
+
+/* this is for the link on the home page  */
+.main-footer-container .end-footer .copy-write{
+  font-size: 17px;
+}
+
+/* this is for the link on the home page  */
+.main-footer-container .end-footer a i{
+  font-size: 30px;
+}
+}
+@media(max-width: 991px) {
+  .input-group:not(.has-validation)>.dropdown-toggle:nth-last-child(n+3),
+  .input-group:not(.has-validation)>:not(:last-child):not(.dropdown-toggle):not(.dropdown-menu) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  } 
+}
+@media(max-width: 420px){
+
+  /* this is to increase the size of footer logo  */
+.main-footer-container .company-logo-icn{
+  width: 3rem;
+  height: auto;
+}
+
+  /* this is to increase the size of footer logo text  */
+.main-footer-container .footer-logo-text{
+  font-size: 25px;
+}
+
+/* this is for the text of footer about logo  */
+.main-footer-container .footer-text{
+  font-size: 14px;
+}
+
+/* this is for the sub heading of the footer  */
+.main-footer-container .sub-head{
+  font-size: 20px;
+}
+
+/* this is for the text of newsletter  */
+.main-footer-container .newsletter-text{
+  font-size: 14px;
+}
+
+
+/* this is for the link on the home page  */
+.main-footer-container li a{
+  font-size: 14px;
+}
+
+/* this is for the link on the home page  */
+.main-footer-container .end-footer .copy-write{
+  font-size: 14px;
+}
+
+/* this is for the link on the home page  */
+.main-footer-container .end-footer a i{
+  font-size: 25px;
+}
+  /* this is for the text of newsletter  */
+  .main-footer-container input::placeholder{
+    font-size: 14px;
+  }
+  
+  /* this for the font size of subscribe btn of footer  */
+
+}
+
+/* --------------footer end ----------- */
+
+/*--------------------------------------------------------------
+# Contact
+--------------------------------------------------------------*/
+.banner {
+  position: relative;
+}
+
+.banner img {
+  display: block;
+  width: 100%;
+  max-height: 50vh;
+}
+
+
+
+.banner .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.banner-title {
+  position: absolute;
+  top: 75%;
+  left: 31.5%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 13px;
+  text-align: center;
+  z-index: 1;
+  font-family: sans-serif;
+  font-weight: 400;
+  text-decoration: none;
+  border: 3px solid #FFFCFA;
+  padding: 10px;
+  border-radius: 10px;
+  transition: 0.4s ease-out;
+}
+
+.banner-title:hover {
+  background-color: #FFFCFA;
+  color: #444;
+}
+.root-color{
+  color: #B78500;
+}
+.contact .info {
+  width: 100%;
+}
+
+.contact .info i {
+  font-size: 25px;
+  background: #ffa940;
+  color: #151515;
+  float: left;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact .info h4 {
+  padding: 0 0 0 60px;
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #151515;
+}
+
+.contact .info p {
+  padding: 0 0 0 60px;
+  margin-bottom: 0;
+  font-size: 18px;
+  color: #484848;
+}
+
+#contact-container form input::placeholder, textarea::placeholder{
+  font-size: 20px;
+}
+
+.contact .info .email,
+.contact .info .phone {
+  margin-top: 40px;
+}
+
+.contact .php-email-form {
+  width: 100%;
+}
+
+.contact .php-email-form .form-group {
+  padding-bottom: 8px;
+}
+
+.contact .php-email-form .error-message {
+  display: none;
+  color: #fff;
+  background: #ed3c0d;
+  text-align: left;
+  padding: 15px;
+  font-weight: 600;
+}
+
+.contact .php-email-form .error-message br+br {
+  margin-top: 25px;
+}
+
+.contact .php-email-form .sent-message {
+  display: none;
+  color: #fff;
+  background: #18d26e;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
+}
+
+.contact .php-email-form .loading {
+  display: none;
+  background: #fff;
+  text-align: center;
+  padding: 15px;
+}
+
+.contact .php-email-form .loading:before {
+  content: "";
+  display: inline-block;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  margin: 0 10px -6px 0;
+  border: 3px solid #18d26e;
+  border-top-color: #eee;
+  -webkit-animation: animate-loading 1s linear infinite;
+  animation: animate-loading 1s linear infinite;
+}
+
+.contact .php-email-form input,
+.contact .php-email-form textarea {
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+.contact .php-email-form input:focus,
+.contact .php-email-form textarea:focus {
+  border-color: #ffc451;
+}
+
+.contact .php-email-form input {
+  height: 44px;
+}
+
+.contact .php-email-form textarea {
+  padding: 10px 12px;
+}
+
+.contact .php-email-form button[type=submit] {
+  background: #B78500;
+  border: 0;
+  padding: 10px 24px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 4px;
+  font-size: 20px;
+}
+
+.contact .php-email-form button[type=submit]:hover {
+  background: #ffcd6b;
+}
+.inquries-row{
+  display: flex;
+  justify-content: center;
+  /* gap: 10px; */
+}
+
+.inquries-col{
+  border: 1px solid #000;
+}
+
+@-webkit-keyframes animate-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* .inquries section start  */
+.inquiries-container{
+  transition: transform 0.3s ease; 
+  max-width: 100%;
+  max-height: 100%;
+  }
+  .inquiries-container:hover{
+  transform: scale(1.03);
+  }
+  .inquiries-heading{
+    font-size: 30px;
+font-weight: 500;
+  }
+
+  
+
+
+  .inquiries-card{
+  transition: transform 0.3s ease; 
+  border: 1px solid #000;
+  }
+  .inquiries-card:hover, .inquiries-card:hover .inquiries-text, .inquiries-card:hover .inquiries-text a{
+    background-color: #B78500;
+    border: none;
+    color: #fff;
+  }
+.agent-name{
+  font-size: 25px;
+}
+.inquiries-text{
+  font-size: 20px;
+}
+.agent-name, .agent-responsibility, .agent-address, .agent-email a{
+  padding-bottom: 5px;
+  color: #4F4E4E;
+
+}
+.opening-hours{
+  margin-bottom: 5px;
+  font-style: italic;
+  position: relative;
+}
+.first-line{
+  color: #4F4E4E;
+}
+.scnd-line{
+  position: relative;
+  left: 100px;
+  color: #4F4E4E;
+  width: fit-content;
+
+}
+.inquiries-text a:hover{
+  color: #000 !important;
+}
+/* .inquries section end  */
+ @media(max-width: 1024px){
+  .contact .php-email-form button[type=submit] {
+    font-size: 17px;
+  }
+  .contact .info i {
+    font-size: 20px;
+  }
+  
+  .contact .info h4 {
+    font-size: 20px;
+  }
+  
+  .contact .info p {
+    font-size: 15px;
+  }
+  
+  #contact-container form input::placeholder, textarea::placeholder{
+    font-size: 15px;
+  }
+  }
+/* responsive section for contact us page  */
+ @media(max-width: 684px){
+.banner-title{
+font-size: 10px;
+}
+}
+@media(max-width: 544px){
+.banner-title{
+font-size: 7px;
+}
+}
+@media(max-width: 400px){
+.banner-title{
+  border: 2px solid #FFFCFA;
+
+}
+}
+
+/* .inquiries section  */
+@media(max-width:1024px){
+  .inquiries-heading{
+    font-size: 25px;
+  }
+  .agent-name{
+    font-size: 20px;
+  }
+  .inquiries-text{
+    font-size: 17px;
+  }
+}
+@media(max-width: 812px){
+  .inquiries-heading{
+    font-size: 23px;
+  }
+  .agent-name{
+    font-size: 18px;
+  }
+  .inquiries-text{
+    font-size: 15px;
+  }
+}
+@media(max-width: 774px){
+  .inquiries-heading{
+    font-size: 21px;
+  }
+  .agent-name{
+    font-size: 16px;
+  }
+  .inquiries-text{
+    font-size: 13px;
+  }
+}
+@media(max-width: 767px){
+  .inquiries-heading{
+    font-size: 25px;
+  }
+  .agent-name{
+    font-size: 20px;
+  }
+  .inquiries-text{
+    font-size: 17px;
+  }
+}
+@media(max-width: 399px){
+  .inquiries-heading{
+    font-size: 23px;
+  }
+  .agent-name{
+    font-size: 18px;
+  }
+  .inquiries-text{
+    font-size: 15px;
+  }
+}
+@media(max-width: 371px){
+  .inquiries-heading{
+    font-size: 21px;
+  }
+  .agent-name{
+    font-size: 16px;
+  }
+  .inquiries-text{
+    font-size: 13px;
+  }
+}
+@media(max-width: 352px){
+  .inquiries-heading{
+    font-size: 19px;
+  }
+  .agent-name{
+    font-size: 14px;
+  }
+  .inquiries-text{
+    font-size: 11px;
+  }
+}
+@media(max-width: 333px){
+  .inquiries-heading{
+    font-size: 17px;
+  }
+  .agent-name{
+    font-size: 12px;
+  }
+  .inquiries-text{
+    font-size: 9px;
+  }
+}
+
+/* testimonials page section  */
+.client-pg-heading{
+  color: var(--text-theme);
+}
+.client-card{
+  background-color: #fff;
+  border-radius: 10px;
+}
+.border {
+  float: left;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: #eee;
+  shape-outside: circle();
+  clip-path: circle();
+  border: 15px solid #fff !important;
+
+}
+
+.pg-client-name{
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 1;
+
+  margin-top: 50px;
+}
+.pg-client-status{
+  font-size: 25px;
+  font-weight: 400;
+
+}
+.client-rating{
+float: right;
+color: #FFC901;
+font-size: 22px;
+}
+.pg-client-text {
+  color: #767676;
+  font-size: 20px;
+}
+.pg-client-btn-group{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.see-more-btn{
+  color: #fff;
+  background-color: #B78500;
+  font-size: 19px;
+  font-weight: 500;
+  border-radius: 5px;
+}
+
+.see-more-btn:hover{
+  border: 1px solid #B78500 !important;
+  color: #B78500 !important;
+  background-color: #fff !important;
+}
+
+.add-more-btn{
+  border: 1px solid #B78500;
+  color: #B78500;
+  background-color: #fff;
+  font-size: 19px;
+  font-weight: 500;
+  border-radius: 5px;
+}
+.add-more-btn:hover {
+  color: #fff !important;
+  background-color: #B78500 !important;
+  font-weight: 400 !important;
+}
+
+/* responsive section for review page started  */
+
+@media(max-width: 876px){
+  .border{
+    width: 150px;
+    height: 150px;
+  }
+  .pg-client-name{
+    font-size: 25px;
+    margin-top: 40px;
+
+  }
+  .pg-client-status{
+    font-size: 20px;
+  }
+  .pg-client-text{
+   font-size: 14px; 
+  }
+  .client-rating{
+    font-size: 17px;
+  }
+}
+@media(max-width: 767px){
+  .border{
+    width: 180px;
+    height: 180px;
+  }
+  .pg-client-name{
+    font-size: 30px;
+    margin-top: 50px;
+  }
+  .pg-client-status{
+    font-size: 25px;
+  }
+  .pg-client-text{
+   font-size: 17px; 
+  }
+  .client-rating{
+    font-size: 20px;
+  }
+}
+ @media(max-width: 410px){
+  .border{
+    width: 150px;
+    height: 150px;
+  }
+  .pg-client-name{
+    font-size: 25px;
+    margin-top: 40px;
+  }
+  .pg-client-status{
+    font-size: 20px;
+  }
+  .pg-client-text{
+   font-size: 14px; 
+  }
+  .client-rating{
+    font-size: 17px;
+  }
+}
+@media(max-width: 352px){
+  .border{
+    width: 130px;
+    height: 130px;
+  }
+  .pg-client-name{
+    font-size: 22px;
+    margin-top: 30px;
+  }
+  .pg-client-status{
+    font-size: 17px;
+  }
+  .pg-client-text{
+    font-size: 12px; 
+  }
+  .client-rating{
+    font-size: 14px;
+  }
+}
+
+/* responsive section for review page end  */
+
+
+/* styling for about us page start */
+/* style for banner  */
+
+.banner-text {
+  position: absolute;
+  top: 50%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  z-index: 1;
+  font-family: sans-serif;
+  transition: 0.4s ease-out;
+}
+
+/* style for main heading   */
+.about-us-heading-text{
+  color: #767676;
+  font-size: 25px;
+}
+
+/* style for our mission and ourview col  */
+
+.about-us-row-p{
+  background-color: #d7e6f3f5;
+}
+.about-us-row-p h3{
+  font-size: 30px;
+}
+.about-us-row-p p{
+  font-size: 18px;
+}
+
+/* our values section start  */
+  .value-col{
+
+  background-color: #fff; 
+}
+
+.value-card{
+  background-color: #F7F7F7;
+  
+}
+.value-detail{
+  color: #767676;
+}
+
+/* style for the client section  */
+.about-pg-client-card{
+  position: relative;
+}
+.about-pg-client-overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5) ;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+.about-pg-client-overlay a{
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 16px 32px;
+  background-color: #000;
+  border-radius: 4px;
+}
+.about-pg-client-card:hover .about-pg-client-overlay{
+  opacity:  1 ;
+}
+/* this is for the the size of value text on the about us page  */
+.value-detail{
+  font-size: 20px;
+} 
+
+/* this is for the the size of value name on the about us page  */
+.value-name{
+  font-size: 30px;
+}
+/* responsive section for about us page start   */
+/* responsive code for banner text  */
+@media(max-width: 643px){
+  .banner-text{
+    top: 40%;
+    font-size: 12px;
+  }
+}
+@media(max-width: 455px){
+  .banner-text{
+    top: 35%;
+    font-size: 10px;
+  }
+}
+@media(max-width: 363px){
+  .banner-text{
+    top: 35%;
+    font-size: 8px;
+  }
+}
+/* responsive code for company overview and mission section  */
+@media(max-width: 1200px){
+  .about-us-row-p h3{
+    font-size: 25px;
+  }
+  .about-us-row-p p{
+    font-size: 15px;
+  }
+  .about-us-heading-text{
+    font-size: 20px;
+  }
+  
+}
+@media(max-width: 761px){
+
+  .about-us-heading-text{
+    font-size: 17px;
+  }
+  
+}
+@media(max-width: 651px){
+  .about-us-row-p h3{
+    font-size: 20px;
+  }
+  .about-us-row-p p{
+    font-size: 10px;
+  }
+  .about-us-heading-text{
+    font-size: 15px;
+  }
+  
+}
+@media(max-width: 578px){
+
+  .about-us-heading-text{
+    font-size: 12px;
+  }
+  
+}
+@media(max-width: 469px){
+
+  .about-us-heading-text{
+    font-size: 10px;
+  }
+  
+}
+/* responsive code for company overview and mission section end */
+
+/* responsive code for value section on the home page  */
+@media(max-width: 1024px){
+
+/* this is for the the size of value text on the about us page  */
+.value-detail{
+  font-size: 17px;
+} 
+
+/* this is for the the size of value name on the about us page  */
+.value-name{
+  font-size: 25px;
+}
+  
+}
+@media(max-width: 400px){
+
+/* this is for the the size of value text on the about us page  */
+.value-detail{
+  font-size: 14px;
+} 
+
+/* this is for the the size of value name on the about us page  */
+.value-name{
+  font-size: 20px;
+}
+  
+}
+
+
+
+
+/* styling for about us page end */
+
+/* styling for FAQS page start */
+.FAQs-heading .sub-faqs-text{
+  font-size: 22px;
+}
+.FAQs-section .accordion-container h4{
+  font-size: 30px;
+}
+.FAQs-section .accordion-container .faqs-accordion div, .faqs-answer p{
+  font-size: 20px;
+}
+
+.main-faqs-text{
+  color: #B78500;
+  font-size: 30px;
+}
+.sub-faqs-text{
+  font-size: 22px;
+  color: #767676;
+}
+.accordion-container{
+  background-color: #fff;
+}
+.faqs-accordion{
+  display: flex;
+  font-size: 20px;
+  color: #4F4E4E;
+  cursor: pointer;
+}
+.faqs-answer{
+  color: #4F4E4E;
+  margin-left: 60px;
+}
+.line-break{
+
+  border: 1px solid #000;
+
+  
+}
+.faqs-answer{
+  display: none;
+  transition: transform 0.2s ease;
+  overflow: hidden;
+}
+.triangle-icon i {
+  transition: transform 0.2s ease;
+}
+
+.triangle-icon .active {
+  transform: rotate(90deg);
+}
+.default-open{
+  display: block;
+}
+.triangle-icon .inactive {
+  transform: rotate(0deg);
+}
+
+/* responsive secition for FAQs page start  */
+
+@media(max-width: 800px){
+  .FAQs-heading .sub-faqs-text{
+    font-size: 18px;
+  }
+  .FAQs-section .accordion-container h4{
+    font-size: 25px;
+  }
+  .FAQs-section .accordion-container .faqs-accordion div, .faqs-answer p{
+    font-size: 15px;
+  } 
+}
+@media(max-width: 575px){
+  .FAQs-heading .sub-faqs-text{
+    font-size: 15px;
+  }
+  .FAQs-section .accordion-container h4{
+    font-size: 20px;
+  }
+  .FAQs-section .accordion-container .faqs-accordion div, .faqs-answer p{
+    font-size: 12px;
+  } 
+  .faqs-answer{
+    margin-left: 40px;
+  }
+}
+
+#navbar-container{
+  z-index: 100000;
+}
+/* styling for FAQS page end */
+
+
+/* styling for properties page start  */
+
+.filter-box{
+  border-radius: 20px;
+  background-color: #D9D9D9;
+  cursor: pointer;
+}
+.form-select-option{
+  width: fit-content;
+}
+
+.search-btn-outline{
+  border: 1px solid #CED4DA;
+}
+
+/* resposive styling for properties page start  */
+/* responsiveness for breadcrums  */
+@media(max-width: 374px){
+  .filter-box{
+    font-size: 13px;
+  }
+}
+@media(max-width: 374px){
+  .filter-box{
+    font-size: 11px;
+  }
+}
+@media(max-width: 354px){
+  .form-select-option{
+    font-size: 13px;
+  }
+}
+
+/* styling for properties page end  */
+.carousel-item-bg-clr{
+  background: #F7F7F7;
+  border: none;
+}
+.img-width{
+  width: fit-content;
+  height: 500px;
+}
+.carousel-item-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+}
+.propty-crls-cntrl-btn{
+  background-color: #D9D9D9;
+}
+.propty-crls-cntrl-btn-prev{
+  margin-left: 60px;
+}
+.propty-crls-cntrl-btn-next{
+  margin-right: 60px;
+}
+.control-icon{
+  font-size: 1rem;
+}
+.over-view-heading{
+
+  font-size: 25px;
+}
+.overview-col{
+width: fit-content;
+
+}
+.overview-icon, .overview-text, .udated{
+  font-size: 20px;
+}
+/* responsive design for overview-section   */
+@media(max-width: 976px){
+  .overview-section .overview-col .udated, .overview-text, .overview-icon{
+    font-size: 17px;
+  }
+}
+@media(max-width: 877px){
+  .overview-section .overview-col .udated, .overview-text, .overview-icon{
+    font-size: 15px;
+  }
+}
+@media(max-width: 811px){
+  .overview-section .overview-col .udated, .overview-text, .overview-icon{
+    font-size: 13px;
+  }
+  .control-icon{
+    font-size: 0.6rem;
+  }
+}
+@media(max-width: 344px){
+  .overview-section .overview-col .udated, .overview-text, .overview-icon{
+    font-size: 11px;
+  }
+  .over-view-heading{
+    font-size: 20px;
+  }
+}
+
+
+
+/* styling for location section  */
+.location-heading{
+  font-size: 30px;
+  
+}
+@media(max-width: 360px){
+  .location-heading{
+    font-size: 20px;
+    
+  }
+}
+/* styling for description section  */
+.description-heading{
+  font-size: 30px;
+}
+.description-section .row .col{
+  font-size: 20px;
+}
+@media(max-width: 1024px){
+  .description-heading{
+    font-size: 25px;
+  }
+  .description-section .row .col{
+    font-size: 18px;
+  }
+}
+@media(max-width: 768px){
+  .description-heading{
+    font-size: 22px;
+  }
+  .description-section .row .col{
+    font-size: 16px;
+  }
+}
+
+@media(max-width: 500px){
+  .description-heading{
+    font-size: 20px;
+  }
+  .description-section .row .col{
+    font-size: 14px;
+  }
+}
+@media(max-width: 380px){
+  .description-heading{
+    font-size: 17px;
+  }
+  .description-section .row .col{
+    font-size: 11px;
+  }
+}
+/* styling for address section  */
+.address-heading{
+  font-size: 30px;
+}
+.address-section-text{
+  color: #000;
+  font-weight: bold;
+  font-size: 20px;
+}
+.address-section-last-line{
+  color: #4F4E4E !important;
+  font-weight: 400 !important;
+}
+@media(max-width: 1024px){
+  .address-heading{
+    font-size: 25px;
+  }
+  .address-section-text{
+    font-size: 17px;
+  }
+}
+@media(max-width: 680px){
+  .address-heading{
+    font-size: 21px;
+  }
+  .address-section-text{
+    font-size: 14px;
+  }
+}
+@media(max-width: 450px){
+  .address-heading{
+    font-size: 18px;
+  }
+  .address-section-text{
+    font-size: 11px;
+  }
+}
+@media(max-width: 380px){
+  .address-heading{
+    font-size: 16px;
+  }
+  .address-section-text{
+    font-size: 10px;
+  }
+}
+
+/* styling for feature section  */
+.feature-heading{
+  font-size: 30px;
+}
+.sub-feature-heading{
+  font-size: 25px;
+  color: #000;
+}
+.sub-feature-text{
+  color: #767676;
+  font-size: 20px;
+}
+
+/* responsive style for feature section  */
+@media(max-width: 1024px){
+  .sub-feature-text{
+    font-size: 17px;
+  }
+  .feature-heading{
+    font-size: 25px;
+  }
+  .sub-feature-heading{
+    font-size: 20px;
+  }
+}
+@media(max-width: 620px){
+  .sub-feature-text{
+    font-size: 14px;
+  }
+
+}
+@media(max-width: 462px){
+  .sub-feature-text{
+    font-size: 12px;
+  }
+  .feature-heading{
+    font-size: 20px;
+  }
+  .sub-feature-heading{
+    font-size: 17px;
+  }
+}
+@media(max-width: 415px){
+  .sub-feature-text{
+    font-size: 11px;
+  }
+  .feature-heading{
+    font-size: 17px;
+  }
+  .sub-feature-heading{
+    font-size: 14px;
+  }
+}
+/* video section start  */
+.video-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media(max-width: 400px){
+  .video-container iframe{
+    height: 300px;
+  }
+}
+@media(max-width: 350px){
+  .video-container iframe{
+    height: 250px;
+  }
+}
+/* graph section start  */
+.graph-section-heading{
+  font-size: 25px;
+}
+@media(max-width: 550px){
+  #myPlot{
+    height: 350px;
+    
+  }
+} 
+@media(max-width: 450px){
+  #myPlot{
+    height: 300px;
+  }
+} 
+
+/* styyling for schedule section  */
+.schedule-select-option{
+  width: fit-content;
+  background-color: #EEEAEA;
+  border: none;
+  color: #808080;
+}
+@media(max-width: 469px){
+  .schedule-select-option{
+    font-size: 13px;
+  }
+}
+@media(max-width: 397px){
+  .schedule-select-option{
+    font-size: 11px;
+  }
+}
+/* contact the selling agent  */
+.selling-agent-contact{
+  width: fit-content;
+  display: flex;
+  font-size: 14px;
+
+}
+
+@media(max-width: 889px){
+  .send-whatsapp-btn, .send-email-btn{
+    font-size: 16px;
+  }
+} 
+@media(max-width: 806px){
+  .send-whatsapp-btn, .send-email-btn{
+    font-size: 14px;
+  }
+} 
+@media(max-width: 767px){
+  .send-whatsapp-btn, .send-email-btn{
+    font-size: 19px;
+  }
+} 
+ @media(max-width: 440px){
+  .send-whatsapp-btn, .send-email-btn{
+    font-size: 16px;
+  }
+}  
+@media(max-width: 399px){
+  .send-whatsapp-btn, .send-email-btn{
+    font-size: 14px;
+  }
+} 
+@media(max-width: 371px){
+  .send-whatsapp-btn, .send-email-btn{
+    font-size: 12px;
+  }
+} 
+@media(max-width: 344px){
+  .send-whatsapp-btn, .send-email-btn{
+    font-size: 10px;
+  }
+}  
+@media(max-width: 482px){
+  .selling-agent-contact{
+    font-size: 12px;
+  }
+}  
+@media(max-width:432px){
+  .selling-agent-contact{
+    font-size: 10px;
+  }
+}  
+
+

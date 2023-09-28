@@ -1,0 +1,99 @@
+
+<footer class=" text-white pt-5 px-sm-5 px-3 ">
+  <div class="container-fluid position-relative main-footer-container">
+    <div class="row main-footer">
+      <div class="col-lg-3 px-3 ">
+        <div class="footer-logo-container">
+          <img src="https://bestwaysproperty.com/PICS/Group%2013.svg" alt="hello" class="company-logo-icn" onclick="window.location.href = 'https://bestwaysproperty.com/'">
+
+      </div>
+        <p class="mt-3 footer-text" >Trusted real estate expertise at Best Way Properties. Your partner for all property needs.<p>
+      </div>
+      <div class="col-lg-3 px-3 footer-row">
+        <h4 class="sub-head">Quick Links</h4>
+        <ul class="list-unstyled">
+          <li class="mt-3"><a href="./index.html">Home</a></li>
+          <li class="mt-3"><a href="./properties.html">Properties</a></li>
+          <li class="mt-3"><a href="./testimonials.html">Testimonials</a></li>
+
+        </ul>
+      </div>
+      <div class="col-lg-3 px-3  footer-row">
+        <h4 class="sub-head">Special Brands</h4>
+        <ul class="list-unstyled">
+          <li class="mt-3"><a href="./faqs.html" class="text-color" >FAQs</a></li>
+          <li class="mt-3"><a href="./about-us.html" class="text-color">About Us</a></li>
+          <li class="mt-3"><a href="./contact-us.html" class="text-color">Contact Us</a></li>
+      
+        </ul>
+      </div>
+      <div class="col-lg-3 ">
+        <h4 class="sub-head">Newsletter</h4>
+        <p class="mt-3 newsletter-text">Subscribe to our newsletter to get updates on new products and special offers.</p>
+        <form class="mt-3 " id="subscribe-form">
+          <div class="input-group mb-3 mt-3 ">
+            <input type="email" class="form-control mt-3 " placeholder="Enter your email" id="subscribe-email" required>
+            <div class="input-group-append">
+              <button id="subscribe-btn" class="btn btn-outline-light mt-3 text-center" type="submit">Subscribe</button>
+            </div>
+          </div>
+        </form>
+        <div class="mt-3" id="subscribe-message" style="display: none;">
+          Thank you for subscribing!
+        </div>
+      </div>
+      </div>
+  
+    </div>
+
+    <hr class="mt-5">
+    <div class="row  end-footer ">
+      <div class="col-md-6 mb-2">
+        <p class="copy-write">&copy; 2023 <a href="index.html"><span class="homepage-link">Best Way Properties</span></a> All Rights Reserved. Developed by <a href="mailto:salastelecomagent57@gmail.com?subject=Interested%20in%20your%20services&body=Hello,%0D%0A%0D%0AI am interested in your services. Please contact me at your earliest convenience.%0D%0A%0D%0AThank you,%0D%0A[Your Name]"><span class="homepage-link"> Nabisalay</span></a> &#128187;</p>
+      </div>
+      <div class="col-md-6 mb-2">
+        <div class="social-icons px-2">
+          <a href="https://www.facebook.com/"><i class="fab fa-facebook mx-1 mx-sm-3"></i></a>
+          <a href="https://twitter.com/"><i class="fab fa-twitter mx-1 mx-sm-3"></i></a>
+          <a href="https://www.instagram.com/"><i class="fab fa-instagram mx-1 mx-sm-3"></i></a>
+          <a href="https://www.pinterest.com/"><i class="fab fa-pinterest mx-1 mx-sm-3"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+$(document).ready(function() {
+  let subscribeForm = document.getElementById("subscribe-form");
+  let subscribeButton = document.getElementById("subscribe-btn");
+  let subscribeMessage = document.getElementById("subscribe-message");
+  let emailInput = document.getElementById("subscribe-email");
+
+  subscribeForm.addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent the default form submission behavior
+
+    let subscription_email = {
+      email: emailInput.value
+    };
+
+    $.ajax({
+      url: 'database.php', // Replace with the actual URL of your server-side script
+      method: 'POST',
+      data: { subscription_email: JSON.stringify(subscription_email) },
+      success: function(response) {
+        // Once the form submission is successful, show the "Thank you for subscribing" message
+        subscribeForm.style.display = "none";
+        subscribeMessage.style.display = "block";
+      },
+      error: function(xhr, status, error) {
+        // Handle the error case
+        console.log(xhr.responseText);
+      }
+    });
+  });
+});
+
+
+
+</script>

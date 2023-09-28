@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="View detailed information and specifications of the selected property. Get insights about its location, features, amenities, and contact details.">
+    <meta name="keywords" content="property details, location, specifications, amenities, contact details, real estate, [property-specific keywords]">
+    <title>Best Way Properties - Trusted Real Estate Partner</title>
+    <!-- Favicon  -->
+    <link rel="icon" type="image/x-icon" href="./PICS/favicon-32x32.png">
+
+    <!-- Bootstrap CSS -->
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+   
+
+
+
+    <!-- Font Awesome -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.css"
+    />
+
+    <!-- custom.css -->
+
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  margin: 50px auto;
+}
+
+.tooltip {
+  position: absolute;
+  display: none;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+      /* Six columns side by side */
+      .column {
+        /* float: left; */
+        width: 18%;
+      }
+
+      /* Add a transparency effect for thumnbail images */
+      .sub-gallery-container {
+        display: flex;
+        justify-content: center;
+      }
+      .sub-gallery {
+        cursor: pointer;
+        opacity: 0.6;
+        border-radius: 15px;
+      }
+
+      .sub-gallery:hover {
+        opacity: 1;
+      }
+    </style>
+  </head>
+
+  <body class="body">
+    <!------------------- navbar start ------------------->
+    <div id="navbar-container"></div>
+
+    <!------------------- navbar end ------------------->
+
+    <h2 class="text-center pt-4 pt-sm-5 home-pg-sub-heading">Property Details</h2>
+
+    <!------------------- carousel start ------------------->
+
+    <div
+      id="carouselExampleCaptions"
+      class="carousel slide  px-0 px-sm-5 py-3 py-sm-5"
+      data-bs-ride="carousel"
+    >
+                     <!------------- slides start ------------------>
+      
+                     <div id="carousel-inner-items" class="carousel-inner ">
+
+                          
+                    </div>
+
+
+      <!------------------ control section start  ----------------->
+       <button id="carousel_prev_btn"
+        class="carousel-control-prev propty-crls-cntrl-btn propty-crls-cntrl-btn-prev "
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev"
+      >
+        <div class="control-icon">❮</div>
+      </button>
+      <button id="carousel_next_btn"
+        class="carousel-control-next  propty-crls-cntrl-btn propty-crls-cntrl-btn-next"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next"
+      >
+        <div class="control-icon">❯</div>
+      </button>
+    </div>     
+
+
+          
+    <!-- overview section start  -->
+    <div class="container-fluid p-3 p-sm-5">
+      <div class="overview-section bg-white p-2 p-sm-4">
+        <div class="over-view-heading mb-2">Overview</div>
+        <div class="row row-cols-3  mb-3">
+          <div class="col overview-col mb-2">
+            <div class="udated">Updated On:</div>
+            <div id="Updated-on" class="overview-text"></div>
+          </div>
+          <div class="col text-center overview-col mb-2">
+            <div class="overview-icon"><i class="fa-solid fa-bed"></i></div>
+            <div id="Bedrooms" class="overview-text"></div>
+          </div>
+          <div class="col text-center overview-col mb-2">
+            <div class="overview-icon"><i class="fa-solid fa-bath"></i></div>
+            <div id="Bathrooms" class="overview-text"></div>
+          </div>
+          <div class="col text-center overview-col mb-2">
+            <div class="overview-icon">
+              <i class="fa-solid fa-car-side"></i>
+            </div>
+            <div id="Garages" class="overview-text"></div>
+          </div>
+          <div class="col text-center overview-col mb-2">
+            <div class="overview-icon">
+              <i class="fa-regular fa-square"></i>
+            </div>
+            <div id="sqft" class="overview-text"></div>
+          </div>
+        
+        <div class="mx-4 overview-col">
+          <div class="overview-icon text-center">
+            <i class="fa-solid fa-calendar"></i>
+          </div>
+          <div id="Year-Built" class="overview-text">Year Built: </div>
+        </div>
+        <!-- <div class="row col-4">
+        
+        </div> -->
+      </div> 
+      </div>
+    </div>
+
+    <!-- overview section end  -->
+
+    
+    <!-- location section start  -->
+    <div class="container-fluid px-3 px-sm-5">
+      <div class="loction-section">
+        <div class="location-heading-container mb-3 mb-sm-5">
+          <div class="location-heading">Location in Google Map</div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <iframe id="google-location"
+              style="border: 0; width: 100%; height: 270px"
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621"
+              frameborder="0"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- location section end -->
+
+    
+    <!-- description section start  -->
+    <div class="container-fluid p-3 p-sm-5">
+      <div class="description-section bg-white p-2 p-sm-4">
+        <div class="description-heading mb-2">
+          Description
+        </div>
+        <div class="row px-2 px-sm-4">
+          <div id="detail-description" class="col">
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- description section end  -->
+
+    <!-- address section start  -->
+    <div class="container-fluid px-3 px-sm-5 pb-5 ">
+      <div class="address-section bg-white p-2 p-sm-4">
+        <div class="address-heading mb-1 mb-sm-3">Address</div>
+        <div class="row row-cols-3 px-2 px-sm-3 px-md-5 mb-2 mb-sm-4 justify-content-between">
+          <div class="col ">
+            <div class="address-section-text">Address: <span id="Address" class="address-section-last-line"></span></div>
+          </div>
+          <div class="col ">
+            <div class="address-section-text">City: <span id="City" class="address-section-last-line"></span></div>
+          </div>
+          <div class="col ">
+            <div class="address-section-text">Area: <span id="Area" class="address-section-last-line"></span></div>
+          </div>
+        </div>
+        <div class="row row-cols-3 px-2 px-sm-3 px-md-5 justify-content-between">
+          <div class="col ">
+            <div class="address-section-text ">Country: <span id="Country" class="address-section-last-line"></span></div>
+          </div>
+          <div class="col ">
+            <div class="address-section-text">State: <span id="State" class="address-section-last-line"> </span></div>
+          </div>
+          <div class="col ">
+            <div class="address-section-text">Zip: <span id="Zip" class="address-section-last-line"></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- address section end -->
+
+    <!-- detail section start  -->
+    <div class="container-fluid px-3 px-sm-5 pb-5 ">
+      <div class="detail-section bg-white px-2 p-sm-4">
+        <div class="address-heading mb-3">Details</div>
+        <div class="row row-cols-3 px-2 px-sm-3  px-md-5 mb-4 justify-content-between">
+          <div class="col ">
+            <div  class="address-section-text mb-3">Property Lot Size: <span id="Lot-Size" class="address-section-last-line"></span></div>
+            <div  class="address-section-text mb-3">Bathrooms: <span id="detail-bath" class="address-section-last-line"></span></div>
+            <div  class="address-section-text mb-3">Garages: <span id="detail-garage" class="address-section-last-line"></span></div>
+            <div class="address-section-text mb-3">Basement: <span id="basement" class="address-section-last-line"></span></div>
+            <div class="address-section-text mb-3">Roofing: <span id="roofing" class="address-section-last-line"></span></div>
+          </div>
+          <div class="col ">
+            <div class="address-section-text mb-3">Price: <span id="detail-price" class="address-section-last-line"></span></div>
+            <div class="address-section-text mb-3">Rooms: <span id="detail-room" class="address-section-last-line"></span></div>
+            <div class="address-section-text mb-3">Garage Size: <span id="garage-size" class="address-section-last-line"></span></div>
+            <div class="address-section-text mb-3">External Construction: <span id="externnal-construction" class="address-section-last-line">&nbsp; No</span></div>
+            <div class="address-section-text mb-3">Structure Type: <span id="structure-type" class="address-section-last-line"></span></div>
+          </div>
+          <div class="col ">
+            <div class="address-section-text mb-3">Property Size: <span id="property-size" class="address-section-last-line"></span></div>
+            <div class="address-section-text mb-3">Bedrooms: <span  id="detail-beds" class="address-section-last-line"></span></div>
+            <div  class="address-section-text mb-3">Year Built: <span id="detail-year-built" class="address-section-last-line"></span></div>
+            <div class="address-section-text mb-3">Exterior Material: <span id="exterior-material" class="address-section-last-line">/span></div>
+            <div  class="address-section-text mb-3">Floors No: <span id="floor-no" class="address-section-last-line"> </span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!-- detail section end -->
+
+    <!-- feature section start  -->
+    <div class="container-fluid px-3 px-sm-5">
+      <div class="feature-section bg-white px-2 p-sm-4">
+        <div class="feature-heading-container mb-3">
+          <div class="feature-heading">
+            Features
+          </div>
+          </div>
+          <!-- first feature box  -->
+          <div class="row mb-3">
+            <div class="sub-featuress-section ">
+              <div class="sub-feature-heading mb-3">Interior Details</div>
+              <div class="row row-cols-3 mx-2 mx-sm-3 mx-md-5 ">
+                <div class="col mb-2">
+                  <div id="interior-deteail1" class="sub-feature-text"></div>
+                </div>
+                <div class="col mb-2">
+                  <div id="interior-deteail2" class="sub-feature-text"></div>
+                </div>
+                <div class="col mb-2">
+                  <div id="interior-deteail3" class="sub-feature-text"></div>
+                </div>
+                <div class="col mb-2">
+                  <div id="interior-deteail4" class="sub-feature-text"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- second feature box  -->
+
+          <div class="row mb-3">
+            <div class="sub-featuress-section ">
+              <div class="sub-feature-heading mb-3">Outdoor Details</div>
+              <div class="row row-cols-3 mx-2 mx-sm-3 mx-md-5 ">
+                <div class="col mb-2">
+                  <div id="outdoor-deteail1" class="sub-feature-text"></div>
+                </div>
+                <div class="col mb-2">
+                  <div id="outdoor-deteail2" class="sub-feature-text"></div>
+                </div>
+                <div class="col mb-2">
+                  <div id="outdoor-deteail3" class="sub-feature-text"></div>
+                </div>
+                <div class="col mb-2">
+                  <div id="outdoor-deteail4" class="sub-feature-text"></div>
+                </div>
+                <div class="col mb-2">
+                  <div id="outdoor-deteail5" class="sub-feature-text"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- third feature box  -->
+
+          <div class="row mb-3">
+            <div class="sub-featuress-section ">
+              <div class="sub-feature-heading mb-3">Utilities</div>
+              <div class="row row-cols-3 mx-2 mx-sm-3 mx-md-5 ">
+                <div class="col mb-2">
+                  <div id="utilities-deteail1" class="sub-feature-text"></div>
+                </div>
+                <div class="col mb-2">
+                  <div id="utilities-deteail2" class="sub-feature-text"></div>
+                </div>
+                <div class="col mb-2">
+                  <div id="utilities-deteail3" class="sub-feature-text"></div>
+                </div>
+                <div class="col mb-2">
+                  <div id="utilities-deteail4" class="sub-feature-text"></div>
+                </div>
+                <div class="col mb-2">
+                  <div id="utilities-deteail5" class="sub-feature-text"></div>
+                </div>
+                <div class="col mb-2">
+                  <div id="utilities-deteail6" class="sub-feature-text"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- fourth feature box  -->
+
+          <div class="row mb-3">
+            <div class="sub-featuress-section ">
+              <div class="sub-feature-heading mb-3">Other Features</div>
+              <div class="row row-cols-3 mx-2 mx-sm-3 mx-md-5">
+                <div class="col mb-2">
+                  <div id="other-deteail1" class="sub-feature-text"></div>
+                </div>
+                <div class="col mb-2">
+                  <div id="other-deteail2" class="sub-feature-text"></div>
+                </div>
+                <div class="col mb-2">
+                  <div  id="other-deteail3" class="sub-feature-text"></div>
+                </div>
+                <div class="col mb-2">
+                  <div id="other-deteail4" class="sub-feature-text"></div>
+                </div>
+                <div class="col mb-2">
+                  <div id="other-deteail5" class="sub-feature-text"></div>
+                </div>
+                <div class="col mb-2">
+                  <div id="other-deteail6" class="sub-feature-text"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!-- feature section end  -->
+
+    <!-- this is giving the error of permission policy so that is my have to commit this for some time  -->
+
+        <!-- video section start  -->
+        <!-- <div class="container-fluid video-container py-5  px-3 px-sm-5">
+       
+          <iframe width="100%" height="360"  src="https://www.youtube.com/embed/zumJJUL_ruM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+  </div> -->
+  <!-- video section end  -->
+    <!-- graph-section start  -->
+<!-- <div class="container-fluid px-3 px-sm-5">
+  <div class="graph-section ">
+    <div class="graph-section-heading mb-3">
+      Property Value
+    </div>
+    <div id="myPlot" class="overflow-hidden"></div>
+  </div>
+</div> -->
+<!-- graph section end  -->
+
+    <!-- Schedule section start  -->
+    <div class="container-fluid px-3 py-5 px-sm-5">
+      <div class="schedule-section bg-white p-4">
+        <div class="schedule-heading-container">
+          <div class="schedule-heading">Schedule a tour</div>
+        </div>
+        <hr>
+        <div class="row">
+          <form id="schedule-form" >
+            <div class="form-group row contact-row">
+              <div class="col-6 mb-1 mb-sm-3 ">
+                <label for="">Fisrt Name*</label>
+                <input id="schedule-first-name" type="text" class="form-control input-p" placeholder="First Name" >
+              </div>
+              <div class="col-6 mb-1 mb-sm-3">
+                <label for="">Last Name*</label>
+                <input id="schedule-last-name"  type="text" class="form-control input-p" placeholder="Last Name" >
+              </div>
+            </div>
+            <div class="form-group row contact-row">
+              <div class="col-sm-6 mb-1 mb-sm-3 ">
+                <label for="">Email Address*</label>
+                <input id="schedule-email" type="email" class="form-control input-p" placeholder="Email" >
+              </div>
+              <div class="col-sm-6 mb-3">
+                <label for="">Phone Number*</label>
+                <input id="schedule-phone"  type="tel" class="form-control input-p" placeholder="Phone Number" >
+              </div>
+            </div>
+            <!-- dropdown selection start -->
+            <div class="row row-cols-2 row-cols-sm-4 ">
+            <div class="col   mb-2">
+              <label class="mb-2" for="">Select Date</label>
+              <select id="date-info" class="form-select schedule-select-option" aria-label="Location" >
+                <option selected disabled hidden> Date </option>
+                <option value="01">01</option>
+                <option value="02">02</option>
+                <option value="03">03</option>
+                <option value="04">04</option>
+                <option value="05">05</option>
+                <option value="06">06</option>
+                <option value="07">07</option>
+                <option value="08">08</option>
+                <option value="09">09</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+                <option value="29">29</option>
+                <option value="30">30</option>
+                <option value="31">31</option>
+              </select>
+            </div>
+            <div class="col  mb-2 ">
+              <label class="mb-2" for="">Select Day</label>
+              <select id="day-info" class="form-select schedule-select-option" aria-label="Location" >
+                  <option selected disabled hidden>Days </option>
+                  <option value="Monday">Monday</option>
+                  <option value="Tuesday">Tuesday</option>
+                  <option value="Wednesday">Wednesday</option>
+                  <option value="Thursday">Thursday</option>
+                  <option value="Friday">Friday</option>
+                  <option value="Saturday">Saturday</option>
+                  <option value="Sunday">Sunday</option>
+                </select>
+            </div>
+            <div class="col mb-2">
+              <label class="mb-2" for="">Select Year</label>
+              <select id="year-info" class="form-select schedule-select-option" aria-label="Location" required>
+                  <option selected>2023</option>
+                  <option value="2024">2024</option>
+                  <option value="2025">2025</option>
+                  <option value="2026">2026</option>
+                </select>
+            </div>
+            <div class="col mb-2">
+              <label class="mb-2" for="">Select Time</label>
+              <select id="time-info" class="form-select schedule-select-option" aria-label="Time" required>
+                <option selected disabled hidden>Select a time</option>
+                <option value="12:00 AM">12:00 AM</option>
+                <option value="1:00 AM">1:00 AM</option>
+                <option value="2:00 AM">2:00 AM</option>
+                <option value="3:00 AM">3:00 AM</option>
+                <option value="4:00 AM">4:00 AM</option>
+                <option value="5:00 AM">5:00 AM</option>
+                <option value="6:00 AM">6:00 AM</option>
+                <option value="7:00 AM">7:00 AM</option>
+                <option value="8:00 AM">8:00 AM</option>
+                <option value="9:00 AM">9:00 AM</option>
+                <option value="10:00 AM">10:00 AM</option>
+                <option value="11:00 AM">11:00 AM</option>
+                <option value="12:00 PM">12:00 PM</option>
+                <option value="1:00 PM">1:00 PM</option>
+                <option value="2:00 PM">2:00 PM</option>
+                <option value="3:00 PM">3:00 PM</option>
+                <option value="4:00 PM">4:00 PM</option>
+                <option value="5:00 PM">5:00 PM</option>
+                <option value="6:00 PM">6:00 PM</option>
+                <option value="7:00 PM">7:00 PM</option>
+                <option value="8:00 PM">8:00 PM</option>
+                <option value="9:00 PM">9:00 PM</option>
+                <option value="10:00 PM">10:00 PM</option>
+                <option value="11:00 PM">11:00 PM</option>
+              </select>
+              </div>
+            </div>
+            <div class="form-group mb-4 contact-row">
+              <label for="">Message*</label>
+              <textarea id="schedule-message" class=" form-control input-p" rows="3" placeholder="Your message" ></textarea>
+            </div>
+            <div class="pg-client-btn-group ">
+              <a href="#"> <button id="see-more" class="btn see-more-btn send-email-btn mx-4"
+                onmouseenter = "see_more_mouseenter()" 
+                onmouseleave = "see_more_mouseleave()">Send Email</button></a>
+              <a href="#"><button id="add-review-btn" class="btn  add-more-btn send-whatsapp-btn " 
+                onmouseenter = "add_more_mouseenter()" 
+                onmouseleave = "add_more_mouseleave()">Send by What'sapp</button></a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- Schedule section end -->
+
+    <!-- contact the selling agent section start  -->
+    <div class="container-fluid px-3 px-sm-5 ">
+      <div class="contact-selling-agent-section bg-white px-4">
+        <div class="row row-cols-1 row-cols-md-2">
+          <div class="col">
+            <p class="">
+              <img class="border" src="./PICS/adeeb asim1.jpeg" alt="Customer Picture">
+          <div class="card-title pg-client-name ">Adeeb Asim</div>
+          <div class="card-title pg-client-status">Founder and Visionary Leadere</div>
+        
+         <span class="pg-client-text "> Meet Adeeb Asim, the CEO and founder of Best Way Properties, has played a pivotal role in taking the company to new heights.</span>
+          </p>
+          <div class="row  row-cols-3 d-flex">
+            <!--<div class=" selling-agent-contact">-->
+            <!-- <i class="fa-solid fa-phone mt-1"></i>-->
+            <!-- <p class=""> &nbsp;&nbsp;&nbsp;(305) 555-4555</p>-->
+            <!--</div>-->
+            <div class="col  selling-agent-contact">
+              <i class="fa-brands fa-whatsapp mt-1"></i>
+              <p class=""> &nbsp;&nbsp;&nbsp;0301-2363828</p>
+            </div>
+            <div class="col   selling-agent-contact">
+              <i class="fa-regular fa-envelope mt-1"></i>
+                <p class=""> &nbsp;&nbsp;&nbsp; adeebhanif96@gmail.com </p>
+            </div>
+          </div>
+          </div>
+          <div class="col py-4">
+            <form id="contact-form">
+              <div class="form-group row contact-row">
+                <div class="col-6 mb-1 mb-sm-3 ">
+                  <label for="">Fisrt Name*</label>
+                  <input id="first-name-input" type="text" class="form-control input-p" placeholder="First Name" required>
+                </div>
+                <div class="col-6 mb-1 mb-sm-3">
+                  <label for="">Last Name*</label>
+                  <input id="last-name-input"  type="text" class="form-control input-p" placeholder="Last Name" required>
+                </div>
+              </div>
+              <div class="form-group row contact-row">
+                <div class="col-sm-6 mb-1 mb-sm-3 ">
+                  <label for="">Email Address*</label>
+                  <input id="email-input"  type="email" class="form-control input-p" placeholder="Email" required>
+                </div>
+                <div class="col-sm-6 mb-3">
+                  <label for="">Phone Number*</label>
+                  <input id="phone-input" type="tel" class="form-control input-p" placeholder="Phone Number" required>
+                </div>
+              </div>
+              
+              <div class="form-group mb-4 contact-row">
+                <label for="">Message*</label>
+                <textarea id="message-input" class=" form-control input-p" rows="3" placeholder="Your message" required></textarea>
+              </div>
+              <div class="pg-client-btn-group ">
+                <a href="#"> <button  class="btn see-more-btn send-email-btn mx-4"
+                  onmouseenter = "see_more_mouseenter()" 
+                  onmouseleave = "see_more_mouseleave()">Send Email</button></a>
+                <a href="#"><button class="btn send-whatsapp-btn  add-more-btn" 
+                  onmouseenter = "add_more_mouseenter()" 
+                  onmouseleave = "add_more_mouseleave()">Send by What'sapp</button></a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- contact the selling agent section end  -->
+
+      <!-------- similar listing section start  ------------->
+
+      <div class="container-fluid py-5 px-4 px-sm-5 ">
+
+        <h2 class="home-pg-sub-heading text-center mb-5 ">Similar Listing</h2>
+        
+        <div id="property-collection" class="row home-collection-row row-cols-1 row-cols-md-2 g-4 ">
+          
+          <!-- card  here  -->
+
+            </div>
+          </div>
+          
+          <!----------- Listing section end  ---------------->
+
+    <!------------------ footer start  ----------------->
+    <div id="footer-container"></div>
+
+    <!------------------ footer end  ----------------->
+
+    <!-- Bootstrap JavaScript -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+    <!-- chart.js -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+    <script src="databs.js"></script>
+
+    <!-- custom javacript  -->
+    <script src="javascript.js"></script>
+    <script>
+// Open slide in main carousel based on sub-gallery click
+function openSlide(slideIndex) {
+  showSlides(slideIndex);
+}
+
+// Show slides in main carousel
+function showSlides(n) {
+  let slides = document.getElementsByClassName("carousel-item");
+  let dots = document.getElementsByClassName("sub-gallery");
+  if (n < 1) {
+    n = slides.length;
+  } else if (n > slides.length) {
+    n = 1;
+  }
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (let i = 0; i < dots.length; i++) {
+    dots[i].classList.remove("active");
+  }
+  slides[n - 1].style.display = "block";
+  dots[n - 1].classList.add("active");
+}
+
+
+    </script>
+  </body>
+</html>

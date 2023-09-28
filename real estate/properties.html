@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore our extensive collection of properties in DHA, Clifton, and Bahria Town. We have a range of apartments, flats, and bungalows for sale and rent. Find your ideal property today and book an apartment in DHA.">
+    <meta name="keywords" content="buy property, sell property, rental property, properties, rent property, properties in DHA, properties in Clifton, DHA property dealers, DHA property rates, DHA property for sale, properties in Bahria Town, apartment in Bahria Town, flats for sale, flats in Bahria Town, flats in DHA, apartment in DHA, bungalows for sale, bungalows for rent, bungalows in DHA, flat in DHA City, apartment in DHA City, bungalows in DHA City, apartment for booking in DHA">
+
+    <title>Best Way Properties - Trusted Real Estate Partner</title>
+    <!-- Favicon  -->
+    <link rel="icon" type="image/x-icon" href="./PICS/favicon-32x32.png">
+
+    <!-- Bootstrap CSS -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.css">
+
+            <!-- custom.css -->
+
+            <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="body ">
+
+
+    <!------------------- navbar start ------------------->
+    <div id="navbar-container"></div>
+
+    <!------------------- navbar end ------------------->
+
+
+    <!------------------- banner start ------------------->
+
+    <div class="banner">
+        
+        <img class="img-fluid" src="./PICS/properties banner.jpg" alt="Banner Image">
+       
+        <div class="overlay"> 
+        </div>
+        
+      </div>
+        <!------------------- banner end ------------------->
+
+                       <!-------- Listing section start  ------------->
+
+                       <div class="container-fluid py-5 px-3 px-sm-5 ">
+                        <h2 class="main-heading text-center mb-5 home-pg-sub-heading">Luxury Collection</h2>
+                        <div class="container-fluid property-page-listing-container">
+                            <nav aria-label="breadcrumb">
+                              <ol class="breadcrumb   justify-content-lg-center justify-content-evenly ">
+                                <li class="filter-box py-2 px-4 mb-2 mx-2"
+                                onclick="Sale()">Sell</li>
+                                <li class="filter-box py-2 px-4 mb-2 mx-2"
+                                onclick="Rent()">Rent</li>
+                                <li class="filter-box py-2 px-4 mb-2 mx-2"
+                                onclick="Appartment()">Apartment</li>
+                                <li class="filter-box py-2 px-4 mb-2 mx-2"
+                                onclick="Flat()">Buglows</li>
+                                <li class="filter-box py-2 px-4 mb-2 mx-2"
+                                onclick="allcollection()">All Collection</li>
+                              </ol>
+                            </nav>
+                            <div class="container-fluid py-5">
+                            <form id="search-form-container" onsubmit ="searchcontrol(event)">
+                               <div  class="row d-flex justify-content-between">    
+                                  <div class="col-lg-2 col-6 mb-2 ">
+                                    <select id="select-prices" class="form-select form-select-option" aria-label="Location">
+                                        <option selected disabled hidden>Prices </option>
+
+                                      </select>
+                                  </div>
+                                  <div class="col-lg-2 col-6 mb-2">
+                                    <select id="select-bedrooms" class="form-select form-select-option" aria-label="Location">
+                                        <option selected disabled hidden>Bed Rooms</option>
+
+                                      </select>
+                                  </div>
+                                  <div class="col-lg-2 col-6 mb-2">
+                                    <select id="select-bathrooms" class="form-select form-select-option" aria-label="Location">
+                                        <option selected disabled hidden>Bath Rooms</option>
+
+                                      </select>
+                                  </div>
+                                  <div class="col-lg-3 col-sm-12">
+                                    <button type="submit" class="btn btn-light search-btn-outline w-100">Search</button>
+                                  </div> 
+                                </div> 
+                              </form>
+                              </div>
+                          </div>
+                          
+                        
+                          <div id="property-collection" class="row home-collection-row row-cols-1 row-cols-md-2 g-4 ">
+                            <!-- all card for properties here              -->
+                              </div>
+                            </div>
+                            
+                            <!----------- Listing section end  ---------------->
+
+                    <!-- read more add comment btn start -->
+
+                    <div class="container-fluid pg-client-btn-group pb-5">
+                        <a href="#"> <button id="see-more" class="btn see-more-btn  mx-4"
+                          onclick="laodmore_properties(event)"
+                          onmouseenter = "see_more_mouseenter()" 
+                          onmouseleave = "see_more_mouseleave()">Load more</button></a>
+                        <a href="addlistisngform.html"><button id="add-review-btn" class="btn  add-more-btn" 
+                          onmouseenter = "add_more_mouseenter()" 
+                          onmouseleave = "add_more_mouseleave()">Add Listing</button></a>
+                      </div>
+                  <!-- read more add comment btn end -->
+
+            <!------------------ footer start  ----------------->
+    <div id="footer-container"></div>
+
+    <!------------------ footer end  ----------------->
+
+                               <!-- Bootstrap JavaScript -->
+                               <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+                               
+                               
+                               <!-- jQuery -->
+                               <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+                               <!-- ScrollTrigger -->
+                               <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script> -->
+
+
+                               <script src="databs.js"></script>
+                               
+                               <!-- custom javacript  -->
+                               <script src="javascript.js"></script>
+
+</body>
+
+</html>
